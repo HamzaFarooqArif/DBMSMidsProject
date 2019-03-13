@@ -250,6 +250,10 @@ namespace DBMS_MiniProject
             {
                 return id;
             }
+            set
+            {
+                id = value;
+            }
         }
 
         public string Details
@@ -270,6 +274,10 @@ namespace DBMS_MiniProject
             get
             {
                 return cloId;
+            }
+            set
+            {
+                cloId = value;
             }
         }
         //Rubric_MemberFunctions----------------------------------------------------
@@ -307,6 +315,11 @@ namespace DBMS_MiniProject
             this.id = -1;
             this.details = details;
             this.cloId = cloId;
+        }
+        public static bool deleteRubricById(int id)
+        {
+            if (Query.Execute("DELETE FROM Rubric WHERE Id = '" + id + "'") > 0) return true;
+            else return false;
         }
         public static Rubric getRubricById(int id)
         {
@@ -421,7 +434,7 @@ namespace DBMS_MiniProject
             return status;
         }
 
-        public static List<Rubric> retriveRubrics(int cloId)
+        public static List<Rubric> retrieveRubricsByCloId(int cloId)
         {
             string conString = Query.connectionString;
             SqlDataReader result = null;
@@ -431,6 +444,28 @@ namespace DBMS_MiniProject
             if (con.State == System.Data.ConnectionState.Open)
             {
                 string q = "SELECT * FROM Rubric WHERE CloId = '" + cloId + "'";
+                SqlCommand cmd = new SqlCommand(q, con);
+                result = cmd.ExecuteReader();
+                while (result.Read())
+                {
+                    Rubric rubric = new Rubric(result.GetString(1), result.GetInt32(2));
+                    rubric.id = result.GetInt32(0);
+                    rubricList.Add(rubric);
+                }
+            }
+            con.Close();
+            return rubricList;
+        }
+        public static List<Rubric> retrieveRubrics()
+        {
+            string conString = Query.connectionString;
+            SqlDataReader result = null;
+            List<Rubric> rubricList = new List<Rubric>();
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                string q = "SELECT * FROM Rubric";
                 SqlCommand cmd = new SqlCommand(q, con);
                 result = cmd.ExecuteReader();
                 while (result.Read())
@@ -618,7 +653,7 @@ namespace DBMS_MiniProject
             con.Close();
             return status;
         }
-        public static List<RubricLevel> retriveRubricLevels(int rubricId)
+        public static List<RubricLevel> retrieveRubricLevels(int rubricId)
         {
             string conString = Query.connectionString;
             SqlDataReader result = null;
@@ -1084,7 +1119,7 @@ namespace DBMS_MiniProject
             con.Close();
             return status;
         }
-        public static List<AssessmentComponent> retriveAssessmentComponents(int assessmentId)
+        public static List<AssessmentComponent> retrieveAssessmentComponents(int assessmentId)
         {
             string conString = Query.connectionString;
             SqlDataReader result = null;

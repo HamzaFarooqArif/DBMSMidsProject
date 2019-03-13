@@ -30,6 +30,7 @@
         {
             this.lbl_StudentForm = new System.Windows.Forms.LinkLabel();
             this.lbl_Clo = new System.Windows.Forms.LinkLabel();
+            this.lbl_RubricForm = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lbl_StudentForm
@@ -54,11 +55,23 @@
             this.lbl_Clo.Text = "CLO Form";
             this.lbl_Clo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbl_Clo_LinkClicked);
             // 
+            // lbl_RubricForm
+            // 
+            this.lbl_RubricForm.AutoSize = true;
+            this.lbl_RubricForm.Location = new System.Drawing.Point(87, 85);
+            this.lbl_RubricForm.Name = "lbl_RubricForm";
+            this.lbl_RubricForm.Size = new System.Drawing.Size(64, 13);
+            this.lbl_RubricForm.TabIndex = 2;
+            this.lbl_RubricForm.TabStop = true;
+            this.lbl_RubricForm.Text = "Rubric Form";
+            this.lbl_RubricForm.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbl_RubricForm_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.lbl_RubricForm);
             this.Controls.Add(this.lbl_Clo);
             this.Controls.Add(this.lbl_StudentForm);
             this.Name = "Form1";
@@ -73,6 +86,7 @@
 
         private System.Windows.Forms.LinkLabel lbl_StudentForm;
         private System.Windows.Forms.LinkLabel lbl_Clo;
+        private System.Windows.Forms.LinkLabel lbl_RubricForm;
     }
 }
 

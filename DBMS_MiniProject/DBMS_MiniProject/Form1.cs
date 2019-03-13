@@ -33,5 +33,11 @@ namespace DBMS_MiniProject
             CLO_Form.getInstance().Show();
             this.Hide();
         }
+
+        private void lbl_RubricForm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Rubric_Form.getInstance().Show();
+            this.Hide();
+        }
     }
 }
