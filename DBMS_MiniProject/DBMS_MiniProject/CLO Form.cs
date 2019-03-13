@@ -18,12 +18,25 @@ namespace DBMS_MiniProject
         {
             if (clo_Form == null)
             {
-                CLO_Form result = new CLO_Form();
-                return result;
+                clo_Form = new CLO_Form();
             }
-            else
+            clo_Form.ClearControls(clo_Form);
+            clo_Form.updateDGVClo();
+            return clo_Form;
+        }
+        private void ClearControls(Control control)
+        {
+            foreach (Control c in control.Controls)
             {
-                return clo_Form;
+                if (c is TextBox)
+                    ((TextBox)c).Clear();
+                else if (c is RadioButton)
+                    ((RadioButton)c).Checked = false;
+                else if (c is ComboBox)
+                    ((ComboBox)c).SelectedIndex = -1;
+
+                if (c.HasChildren)
+                    ClearControls(c);
             }
         }
         private CLO_Form()
@@ -33,7 +46,7 @@ namespace DBMS_MiniProject
 
         private void CLO_Form_Load(object sender, EventArgs e)
         {
-            updateDGVClo();
+            
         }
         private void updateDGVClo()
         {
@@ -145,6 +158,12 @@ namespace DBMS_MiniProject
             updateDGVClo();
             loadBlank();
             currentObject.Id = -1;
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            Form1.getInstance().Show();
+            this.Hide();
         }
     }
 }

@@ -18,12 +18,31 @@ namespace DBMS_MiniProject
         {
             if(student_Form == null)
             {
-                Student_Form result = new Student_Form();
-                return result;
+                student_Form = new Student_Form();
             }
-            else
+
+            student_Form.ClearControls(student_Form);
+            student_Form.updateDGVStudent();
+            List<Lookup> lookupList = Lookup.retrieveLookupsByCategory("STUDENT_STATUS");
+            foreach (Lookup lk in lookupList)
             {
-                return student_Form;
+                student_Form.cb_status.Items.Add(lk.Name);
+            }
+            return student_Form;
+        }
+        private void ClearControls(Control control)
+        {
+            foreach (Control c in control.Controls)
+            {
+                if (c is TextBox)
+                    ((TextBox)c).Clear();
+                else if (c is RadioButton)
+                    ((RadioButton)c).Checked = false;
+                else if (c is ComboBox)
+                    ((ComboBox)c).SelectedIndex = -1;
+
+                if (c.HasChildren)
+                    ClearControls(c);
             }
         }
         private Student_Form()
@@ -33,13 +52,7 @@ namespace DBMS_MiniProject
 
         private void Student_Form_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'projectBDataSet.Student' table. You can move, or remove it, as needed.
-            updateDGVStudent();
-            List<Lookup> lookupList = Lookup.retrieveLookupsByCategory("STUDENT_STATUS");
-            foreach(Lookup lk in lookupList)
-            {
-                cb_status.Items.Add(lk.Name);
-            }
+            
         }
 
         private void updateDGVStudent()
@@ -184,6 +197,12 @@ namespace DBMS_MiniProject
             updateDGVStudent();
             loadBlank();
             currentObject.Id = -1;
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            Form1.getInstance().Show();
+            this.Hide();
         }
     }
 }

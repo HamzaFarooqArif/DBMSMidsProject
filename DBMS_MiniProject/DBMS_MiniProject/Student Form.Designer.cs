@@ -43,9 +43,6 @@
             this.cb_status = new System.Windows.Forms.ComboBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.dgv_Student = new System.Windows.Forms.DataGridView();
-            this.projectBDataSet = new DBMS_MiniProject.ProjectBDataSet();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentTableAdapter = new DBMS_MiniProject.ProjectBDataSetTableAdapters.StudentTableAdapter();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,8 +51,12 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.projectBDataSet = new DBMS_MiniProject.ProjectBDataSet();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentTableAdapter = new DBMS_MiniProject.ProjectBDataSetTableAdapters.StudentTableAdapter();
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_Exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Student)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
@@ -187,20 +188,6 @@
             this.dgv_Student.TabIndex = 13;
             this.dgv_Student.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // projectBDataSet
-            // 
-            this.projectBDataSet.DataSetName = "ProjectBDataSet";
-            this.projectBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataMember = "Student";
-            this.studentBindingSource.DataSource = this.projectBDataSet;
-            // 
-            // studentTableAdapter
-            // 
-            this.studentTableAdapter.ClearBeforeFill = true;
-            // 
             // Column8
             // 
             this.Column8.HeaderText = "Id";
@@ -244,6 +231,20 @@
             this.Column7.Text = "Edit/Delete";
             this.Column7.UseColumnTextForButtonValue = true;
             // 
+            // projectBDataSet
+            // 
+            this.projectBDataSet.DataSetName = "ProjectBDataSet";
+            this.projectBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "Student";
+            this.studentBindingSource.DataSource = this.projectBDataSet;
+            // 
+            // studentTableAdapter
+            // 
+            this.studentTableAdapter.ClearBeforeFill = true;
+            // 
             // btn_Update
             // 
             this.btn_Update.Location = new System.Drawing.Point(93, 181);
@@ -264,11 +265,22 @@
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
+            // btn_Exit
+            // 
+            this.btn_Exit.Location = new System.Drawing.Point(174, 226);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(75, 23);
+            this.btn_Exit.TabIndex = 16;
+            this.btn_Exit.Text = "Exit to Home";
+            this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
+            // 
             // Student_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1178, 261);
+            this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.dgv_Student);
@@ -325,5 +337,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Column7;
         private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.Button btn_Exit;
     }
 }

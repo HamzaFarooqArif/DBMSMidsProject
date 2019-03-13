@@ -31,14 +31,15 @@
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.dgv_Clo = new System.Windows.Forms.DataGridView();
-            this.btn_Add = new System.Windows.Forms.Button();
-            this.btn_Update = new System.Windows.Forms.Button();
-            this.btn_Delete = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btn_Add = new System.Windows.Forms.Button();
+            this.btn_Update = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_Exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Clo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +75,33 @@
             this.dgv_Clo.TabIndex = 2;
             this.dgv_Clo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Clo_CellContentClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "DateCreated";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "DateUpdated";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Modify";
+            this.Column5.Name = "Column5";
+            this.Column5.Text = "Edit/Delete";
+            this.Column5.UseColumnTextForButtonValue = true;
+            // 
             // btn_Add
             // 
             this.btn_Add.Location = new System.Drawing.Point(12, 41);
@@ -104,38 +132,22 @@
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
-            // Column1
+            // btn_Exit
             // 
-            this.Column1.HeaderText = "Id";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "DateCreated";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "DateUpdated";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Modify";
-            this.Column5.Name = "Column5";
-            this.Column5.Text = "Edit/Delete";
-            this.Column5.UseColumnTextForButtonValue = true;
+            this.btn_Exit.Location = new System.Drawing.Point(174, 70);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(84, 23);
+            this.btn_Exit.TabIndex = 6;
+            this.btn_Exit.Text = "Exit To Home";
+            this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // CLO_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 261);
+            this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.btn_Add);
@@ -164,5 +176,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewButtonColumn Column5;
+        private System.Windows.Forms.Button btn_Exit;
     }
 }

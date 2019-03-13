@@ -19,12 +19,30 @@ namespace DBMS_MiniProject
         {
             if (rubric_Form == null)
             {
-                Rubric_Form result = new Rubric_Form();
-                return result;
+                rubric_Form = new Rubric_Form();
             }
-            else
+            rubric_Form.ClearControls(rubric_Form);
+            rubric_Form.updateDGVRubric();
+            List<Clo> cloList = Clo.retrieveClos();
+            foreach (Clo cl in cloList)
             {
-                return rubric_Form;
+                rubric_Form.cb_Clo.Items.Add(cl.Name);
+            }
+            return rubric_Form;
+        }
+        private void ClearControls(Control control)
+        {
+            foreach (Control c in control.Controls)
+            {
+                if (c is TextBox)
+                    ((TextBox)c).Clear();
+                else if (c is RadioButton)
+                    ((RadioButton)c).Checked = false;
+                else if (c is ComboBox)
+                    ((ComboBox)c).SelectedIndex = -1;
+
+                if (c.HasChildren)
+                    ClearControls(c);
             }
         }
         private Rubric_Form()
@@ -52,12 +70,7 @@ namespace DBMS_MiniProject
 
         private void Rubric_Form_Load(object sender, EventArgs e)
         {
-            updateDGVRubric();
-            List<Clo> cloList = Clo.retrieveClos();
-            foreach (Clo cl in cloList)
-            {
-                cb_Clo.Items.Add(cl.Name);
-            }
+
         }
         private void loadCurrentObject()
         {
@@ -155,6 +168,12 @@ namespace DBMS_MiniProject
             updateDGVRubric();
             loadBlank();
             currentObject.Id = -1;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1.getInstance().Show();
+            this.Hide();
         }
     }
 }

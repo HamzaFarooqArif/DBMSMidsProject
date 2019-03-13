@@ -13,7 +13,32 @@ namespace DBMS_MiniProject
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public static Form1 index_Form = null;
+        public static Form1 getInstance()
+        {
+            if (index_Form == null)
+            {
+                index_Form = new Form1();
+            }
+            ClearControls(index_Form);
+            return index_Form;
+        }
+        private static void ClearControls(Control control)
+        {
+            foreach (Control c in control.Controls)
+            {
+                if (c is TextBox)
+                    ((TextBox)c).Clear();
+                else if (c is RadioButton)
+                    ((RadioButton)c).Checked = false;
+                else if (c is ComboBox)
+                    ((ComboBox)c).SelectedIndex = -1;
+
+                if (c.HasChildren)
+                    ClearControls(c);
+            }
+        }
+        private Form1()
         {
             InitializeComponent();
         }
@@ -38,6 +63,11 @@ namespace DBMS_MiniProject
         {
             Rubric_Form.getInstance().Show();
             this.Hide();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }
