@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.lbl_StudentForm = new System.Windows.Forms.LinkLabel();
+            this.lbl_Clo = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lbl_StudentForm
             // 
             this.lbl_StudentForm.AutoSize = true;
-            this.lbl_StudentForm.Location = new System.Drawing.Point(87, 132);
+            this.lbl_StudentForm.Location = new System.Drawing.Point(87, 23);
             this.lbl_StudentForm.Name = "lbl_StudentForm";
             this.lbl_StudentForm.Size = new System.Drawing.Size(70, 13);
             this.lbl_StudentForm.TabIndex = 0;
@@ -42,11 +43,23 @@
             this.lbl_StudentForm.Text = "Student Form";
             this.lbl_StudentForm.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbl_StudentForm_LinkClicked);
             // 
+            // lbl_Clo
+            // 
+            this.lbl_Clo.AutoSize = true;
+            this.lbl_Clo.Location = new System.Drawing.Point(87, 56);
+            this.lbl_Clo.Name = "lbl_Clo";
+            this.lbl_Clo.Size = new System.Drawing.Size(54, 13);
+            this.lbl_Clo.TabIndex = 1;
+            this.lbl_Clo.TabStop = true;
+            this.lbl_Clo.Text = "CLO Form";
+            this.lbl_Clo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbl_Clo_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.lbl_Clo);
             this.Controls.Add(this.lbl_StudentForm);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -59,6 +72,7 @@
         #endregion
 
         private System.Windows.Forms.LinkLabel lbl_StudentForm;
+        private System.Windows.Forms.LinkLabel lbl_Clo;
     }
 }
 

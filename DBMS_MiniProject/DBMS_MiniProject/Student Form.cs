@@ -157,9 +157,10 @@ namespace DBMS_MiniProject
             {
                 if (currentObject.Status == -1) MessageBox.Show("Warning: Select a valid Status!");
                 setCurrentObject();
-                if (Student.addStudent(currentObject) == 0) MessageBox.Show("Error: Update Unsuccessful!");
-                if(Student.addStudent(currentObject) == 1) MessageBox.Show("Added Successfully!");
-                if (Student.addStudent(currentObject) == 2) MessageBox.Show("Updated Successfully!");
+                int msg = Student.addStudent(currentObject);
+                if (msg == 0) MessageBox.Show("Error: Update Unsuccessful!");
+                if(msg == 1) MessageBox.Show("Added Successfully!");
+                if (msg == 2) MessageBox.Show("Updated Successfully!");
                 updateDGVStudent();
                 loadBlank();
                 currentObject.Id = -1;
@@ -168,6 +169,11 @@ namespace DBMS_MiniProject
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
+            if (currentObject.Id == -1)
+            {
+                MessageBox.Show("Warning: Select An Object First!");
+                return;
+            }
             if (isBlank())
             {
                 MessageBox.Show("Warning: Check Input Fields");

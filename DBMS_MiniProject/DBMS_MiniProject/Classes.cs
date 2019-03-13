@@ -56,6 +56,10 @@ namespace DBMS_MiniProject
             {
                 return dateUpdated;
             }
+            set
+            {
+                dateUpdated = value;
+            }
         }
 
         public DateTime DateCreated
@@ -64,6 +68,10 @@ namespace DBMS_MiniProject
             {
                 return dateCreated;
             }
+            set
+            {
+                dateCreated = value;
+            }
         }
 
         public int Id
@@ -71,6 +79,10 @@ namespace DBMS_MiniProject
             get
             {
                 return id;
+            }
+            set
+            {
+                id = value;
             }
         }
 
@@ -81,6 +93,11 @@ namespace DBMS_MiniProject
             this.name = name;
             this.dateCreated = DateTime.Now;
             this.dateUpdated = DateTime.Now;
+        }
+        public static bool deleteCloById(int id)
+        {
+            if (Query.Execute("DELETE FROM Clo WHERE Id = '" + id + "'") > 0) return true;
+            else return false;
         }
 
         public static Clo getClo(string name)

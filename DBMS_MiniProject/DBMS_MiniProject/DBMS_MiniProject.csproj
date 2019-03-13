@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes.cs" />
+    <Compile Include="CLO Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLO Form.Designer.cs">
+      <DependentUpon>CLO Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     <Compile Include="Student Form.Designer.cs">
       <DependentUpon>Student Form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CLO Form.resx">
+      <DependentUpon>CLO Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

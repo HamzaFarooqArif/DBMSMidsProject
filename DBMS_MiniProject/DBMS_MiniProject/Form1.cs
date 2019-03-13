@@ -27,5 +27,11 @@ namespace DBMS_MiniProject
             Student_Form.getInstance().Show();
             this.Hide();
         }
+
+        private void lbl_Clo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CLO_Form.getInstance().Show();
+            this.Hide();
+        }
     }
 }
