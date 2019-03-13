@@ -1,0 +1,10 @@
+c:\users\acer\documents\visual studio 2015\Projects\DBMS_MiniProject\DBMS_MiniProject\bin\Debug\DBMS_MiniProject.exe.config
+c:\users\acer\documents\visual studio 2015\Projects\DBMS_MiniProject\DBMS_MiniProject\bin\Debug\DBMS_MiniProject.exe
+c:\users\acer\documents\visual studio 2015\Projects\DBMS_MiniProject\DBMS_MiniProject\bin\Debug\DBMS_MiniProject.pdb
+c:\users\acer\documents\visual studio 2015\Projects\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.csprojResolveAssemblyReference.cache
+c:\users\acer\documents\visual studio 2015\Projects\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.Form1.resources
+c:\users\acer\documents\visual studio 2015\Projects\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.Properties.Resources.resources
+c:\users\acer\documents\visual studio 2015\Projects\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.csproj.GenerateResource.Cache
+c:\users\acer\documents\visual studio 2015\Projects\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.exe
+c:\users\acer\documents\visual studio 2015\Projects\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.pdb
+C:\Users\Acer\documents\visual studio 2015\Projects\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.Student_Form.resources
