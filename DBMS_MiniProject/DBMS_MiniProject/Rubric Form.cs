@@ -175,5 +175,10 @@ namespace DBMS_MiniProject
             Form1.getInstance().Show();
             this.Hide();
         }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
