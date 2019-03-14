@@ -43,6 +43,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Heading = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Clo)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -81,9 +82,9 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgv_Clo.Location = new System.Drawing.Point(12, 104);
+            this.dgv_Clo.Location = new System.Drawing.Point(15, 134);
             this.dgv_Clo.Name = "dgv_Clo";
-            this.dgv_Clo.Size = new System.Drawing.Size(425, 207);
+            this.dgv_Clo.Size = new System.Drawing.Size(425, 214);
             this.dgv_Clo.TabIndex = 2;
             this.dgv_Clo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Clo_CellContentClick);
             // 
@@ -167,7 +168,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.lbl_Name, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txt_Name, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 37);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -185,7 +186,7 @@
             this.tableLayoutPanel2.Controls.Add(this.btn_Add, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_Update, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 2, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 46);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 71);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -210,15 +211,27 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(137, 51);
             this.tableLayoutPanel3.TabIndex = 5;
             // 
+            // lbl_Heading
+            // 
+            this.lbl_Heading.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_Heading.AutoSize = true;
+            this.lbl_Heading.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Heading.Location = new System.Drawing.Point(151, 9);
+            this.lbl_Heading.Name = "lbl_Heading";
+            this.lbl_Heading.Size = new System.Drawing.Size(131, 25);
+            this.lbl_Heading.TabIndex = 20;
+            this.lbl_Heading.Text = "Manage CLO";
+            // 
             // CLO_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 323);
+            this.ClientSize = new System.Drawing.Size(449, 360);
+            this.Controls.Add(this.lbl_Heading);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.dgv_Clo);
-            this.MinimumSize = new System.Drawing.Size(465, 362);
+            this.MinimumSize = new System.Drawing.Size(465, 399);
             this.Name = "CLO_Form";
             this.Text = "CLO_Form";
             this.Load += new System.EventHandler(this.CLO_Form_Load);
@@ -228,6 +241,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -248,5 +262,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label lbl_Heading;
     }
 }

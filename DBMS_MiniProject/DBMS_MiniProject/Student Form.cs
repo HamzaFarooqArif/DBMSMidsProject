@@ -23,11 +23,13 @@ namespace DBMS_MiniProject
 
             student_Form.ClearControls(student_Form);
             student_Form.updateDGVStudent();
+            student_Form.cb_status.Items.Clear();
             List<Lookup> lookupList = Lookup.retrieveLookupsByCategory("STUDENT_STATUS");
             foreach (Lookup lk in lookupList)
             {
                 student_Form.cb_status.Items.Add(lk.Name);
             }
+            student_Form.cb_status.SelectedItem = student_Form.cb_status.Items[0];
             return student_Form;
         }
         private void ClearControls(Control control)

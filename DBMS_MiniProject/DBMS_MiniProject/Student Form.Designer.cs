@@ -43,6 +43,14 @@
             this.cb_status = new System.Windows.Forms.ComboBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.dgv_Student = new System.Windows.Forms.DataGridView();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.projectBDataSet = new DBMS_MiniProject.ProjectBDataSet();
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentTableAdapter = new DBMS_MiniProject.ProjectBDataSetTableAdapters.StudentTableAdapter();
@@ -52,14 +60,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.Column7 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbl_Heading = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Student)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
@@ -205,11 +206,61 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dgv_Student.Location = new System.Drawing.Point(12, 245);
+            this.dgv_Student.Location = new System.Drawing.Point(15, 270);
             this.dgv_Student.Name = "dgv_Student";
-            this.dgv_Student.Size = new System.Drawing.Size(731, 238);
+            this.dgv_Student.Size = new System.Drawing.Size(728, 213);
             this.dgv_Student.TabIndex = 13;
             this.dgv_Student.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Column8
+            // 
+            this.Column8.FillWeight = 40.60914F;
+            this.Column8.HeaderText = "Id";
+            this.Column8.Name = "Column8";
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 108.4844F;
+            this.Column1.HeaderText = "FirstName";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 108.4844F;
+            this.Column2.HeaderText = "LastName";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 108.4844F;
+            this.Column3.HeaderText = "Contact";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 108.4844F;
+            this.Column4.HeaderText = "Email";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 108.4844F;
+            this.Column5.HeaderText = "RegistrationNumber";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.FillWeight = 108.4844F;
+            this.Column6.HeaderText = "Status";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.FillWeight = 108.4844F;
+            this.Column7.HeaderText = "Modify";
+            this.Column7.Name = "Column7";
+            this.Column7.Text = "Edit/Delete";
+            this.Column7.UseColumnTextForButtonValue = true;
             // 
             // projectBDataSet
             // 
@@ -277,7 +328,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txt_LastName, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txt_Email, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txt_Contact, 1, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 37);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -300,11 +351,11 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_Add, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_Update, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 171);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 196);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(731, 68);
             this.tableLayoutPanel2.TabIndex = 18;
             // 
@@ -325,61 +376,23 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(239, 62);
             this.tableLayoutPanel3.TabIndex = 19;
             // 
-            // Column7
+            // lbl_Heading
             // 
-            this.Column7.FillWeight = 108.4844F;
-            this.Column7.HeaderText = "Modify";
-            this.Column7.Name = "Column7";
-            this.Column7.Text = "Edit/Delete";
-            this.Column7.UseColumnTextForButtonValue = true;
-            // 
-            // Column6
-            // 
-            this.Column6.FillWeight = 108.4844F;
-            this.Column6.HeaderText = "Status";
-            this.Column6.Name = "Column6";
-            // 
-            // Column5
-            // 
-            this.Column5.FillWeight = 108.4844F;
-            this.Column5.HeaderText = "RegistrationNumber";
-            this.Column5.Name = "Column5";
-            // 
-            // Column4
-            // 
-            this.Column4.FillWeight = 108.4844F;
-            this.Column4.HeaderText = "Email";
-            this.Column4.Name = "Column4";
-            // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 108.4844F;
-            this.Column3.HeaderText = "Contact";
-            this.Column3.Name = "Column3";
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 108.4844F;
-            this.Column2.HeaderText = "LastName";
-            this.Column2.Name = "Column2";
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 108.4844F;
-            this.Column1.HeaderText = "FirstName";
-            this.Column1.Name = "Column1";
-            // 
-            // Column8
-            // 
-            this.Column8.FillWeight = 40.60914F;
-            this.Column8.HeaderText = "Id";
-            this.Column8.Name = "Column8";
+            this.lbl_Heading.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_Heading.AutoSize = true;
+            this.lbl_Heading.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Heading.Location = new System.Drawing.Point(305, 9);
+            this.lbl_Heading.Name = "lbl_Heading";
+            this.lbl_Heading.Size = new System.Drawing.Size(157, 25);
+            this.lbl_Heading.TabIndex = 19;
+            this.lbl_Heading.Text = "Manage Student";
             // 
             // Student_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(755, 495);
+            this.Controls.Add(this.lbl_Heading);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.dgv_Student);
@@ -395,6 +408,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -431,5 +445,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewButtonColumn Column7;
+        private System.Windows.Forms.Label lbl_Heading;
     }
 }

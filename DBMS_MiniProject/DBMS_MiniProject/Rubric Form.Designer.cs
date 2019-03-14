@@ -44,6 +44,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Heading = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Rubric)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -101,9 +102,9 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgv_Rubric.Location = new System.Drawing.Point(12, 144);
+            this.dgv_Rubric.Location = new System.Drawing.Point(12, 184);
             this.dgv_Rubric.Name = "dgv_Rubric";
-            this.dgv_Rubric.Size = new System.Drawing.Size(369, 175);
+            this.dgv_Rubric.Size = new System.Drawing.Size(369, 173);
             this.dgv_Rubric.TabIndex = 4;
             this.dgv_Rubric.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Rubric_CellContentClick);
             // 
@@ -184,7 +185,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lbl_Clo, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txt_Details, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.cb_Clo, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 37);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -203,11 +204,11 @@
             this.tableLayoutPanel2.Controls.Add(this.btn_Add, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_Update, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 2, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 67);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 107);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(369, 71);
             this.tableLayoutPanel2.TabIndex = 10;
             this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
@@ -229,15 +230,27 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(118, 65);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
+            // lbl_Heading
+            // 
+            this.lbl_Heading.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_Heading.AutoSize = true;
+            this.lbl_Heading.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Heading.Location = new System.Drawing.Point(121, 9);
+            this.lbl_Heading.Name = "lbl_Heading";
+            this.lbl_Heading.Size = new System.Drawing.Size(144, 25);
+            this.lbl_Heading.TabIndex = 11;
+            this.lbl_Heading.Text = "Manage Rubric";
+            // 
             // Rubric_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 331);
+            this.ClientSize = new System.Drawing.Size(393, 369);
+            this.Controls.Add(this.lbl_Heading);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.dgv_Rubric);
-            this.MinimumSize = new System.Drawing.Size(409, 370);
+            this.MinimumSize = new System.Drawing.Size(409, 408);
             this.Name = "Rubric_Form";
             this.Text = "Rubric_Form";
             this.Load += new System.EventHandler(this.Rubric_Form_Load);
@@ -247,6 +260,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -268,5 +282,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label lbl_Heading;
     }
 }

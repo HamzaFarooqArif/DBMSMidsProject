@@ -21,13 +21,17 @@ namespace DBMS_MiniProject
             {
                 rubric_Form = new Rubric_Form();
             }
+            //-------------------------------------------------------------------------------
             rubric_Form.ClearControls(rubric_Form);
             rubric_Form.updateDGVRubric();
+            rubric_Form.cb_Clo.Items.Clear();
             List<Clo> cloList = Clo.retrieveClos();
             foreach (Clo cl in cloList)
             {
                 rubric_Form.cb_Clo.Items.Add(cl.Name);
             }
+            rubric_Form.cb_Clo.SelectedItem = rubric_Form.cb_Clo.Items[0];
+            //-------------------------------------------------------------------------------
             return rubric_Form;
         }
         private void ClearControls(Control control)

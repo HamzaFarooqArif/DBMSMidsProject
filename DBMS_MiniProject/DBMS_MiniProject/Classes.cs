@@ -94,8 +94,38 @@ namespace DBMS_MiniProject
             this.dateCreated = DateTime.Now;
             this.dateUpdated = DateTime.Now;
         }
+        public static List<Rubric> checkDependancy(int id)
+        {
+            string conString = Query.connectionString;
+            SqlDataReader result = null;
+            List<Rubric> rubricList = new List<Rubric>();
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                string q = "SELECT * FROM Rubric WHERE CloId = '" + id + "'";
+                SqlCommand cmd = new SqlCommand(q, con);
+                result = cmd.ExecuteReader();
+                while (result.Read())
+                {
+                    Rubric rubric = new Rubric("Empty", -1);
+                    rubric.Id = result.GetInt32(0);
+                    rubric.Details = result.GetString(1);
+                    rubric.CloId = result.GetInt32(2);
+
+                    rubricList.Add(rubric);
+                }
+            }
+            con.Close();
+            return rubricList;
+        }
         public static bool deleteCloById(int id)
         {
+            List<Rubric> rubricList = Clo.checkDependancy(id);
+            foreach(Rubric rb in rubricList)
+            {
+                Rubric.deleteRubricById(rb.Id);
+            }
             if (Query.Execute("DELETE FROM Clo WHERE Id = '" + id + "'") > 0) return true;
             else return false;
         }
