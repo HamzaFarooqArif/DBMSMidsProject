@@ -30,7 +30,7 @@ namespace DBMS_MiniProject
             {
                 rubric_Form.cb_Clo.Items.Add(cl.Name);
             }
-            rubric_Form.cb_Clo.SelectedItem = rubric_Form.cb_Clo.Items[0];
+            if(rubric_Form.cb_Clo.Items.Count > 0) rubric_Form.cb_Clo.SelectedItem = rubric_Form.cb_Clo.Items[0];
             //-------------------------------------------------------------------------------
             return rubric_Form;
         }
@@ -184,5 +184,7 @@ namespace DBMS_MiniProject
         {
 
         }
+
+        
     }
 }

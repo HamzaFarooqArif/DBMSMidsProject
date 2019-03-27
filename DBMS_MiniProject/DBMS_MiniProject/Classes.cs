@@ -233,7 +233,8 @@ namespace DBMS_MiniProject
             }
             if (found)
             {
-                if (tempClo.name != clo.name && !tempClo.name.Equals("Empty"))
+                if (tempClo.name != clo.name && !(tempClo.name.Equals("Empty")) &&
+                   (Clo.getClo(clo.name).id == -1 || Clo.getClo(clo.name).id == tempClo.id))
                 {
                     Query.Execute("UPDATE Clo SET Name = '" + clo.name + "', DateUpdated = '" + clo.dateUpdated.ToString(@"yyyy-MM-dd") + "' WHERE Id = '" + clo.id + "'");
                     status = 2;
@@ -431,7 +432,8 @@ namespace DBMS_MiniProject
                     (
                       (tempRubric.details != rubric.details) ||
                       (tempRubric.cloId != rubric.cloId)
-                    )
+                    )&&
+                    (Rubric.getRubric(rubric.details, rubric.cloId).id == -1 || Rubric.getRubric(rubric.details, rubric.cloId).id == tempRubric.id)
                   )
                 {
                     Query.Execute("UPDATE Rubric SET Details = '" + rubric.details + "', CloId = '" + rubric.cloId + "' WHERE Id = '" + rubric.id + "'");
@@ -722,6 +724,10 @@ namespace DBMS_MiniProject
             {
                 return id;
             }
+            set
+            {
+                id = value;
+            }
         }
 
         public string Title
@@ -742,6 +748,10 @@ namespace DBMS_MiniProject
             get
             {
                 return dateCreated;
+            }
+            set
+            {
+                dateCreated = value;
             }
         }
 
@@ -803,6 +813,11 @@ namespace DBMS_MiniProject
             }
             con.Close();
             return assessment;
+        }
+        public static bool deleteAssessmentById(int id)
+        {
+            if (Query.Execute("DELETE FROM Assessment WHERE Id = '" + id + "'") > 0) return true;
+            else return false;
         }
         public static Assessment getAssessmentById(int id)
         {
@@ -888,7 +903,8 @@ namespace DBMS_MiniProject
                       (tempAssessment.title != assessment.title) ||
                       (tempAssessment.totalMarks != assessment.totalMarks) ||
                       (tempAssessment.totalWeightage != assessment.totalWeightage)
-                    )
+                    )&&
+                    (Assessment.getAssessment(assessment.title).id == -1 || Assessment.getAssessment(assessment.title).id == tempAssessment.id)
                    )
                 {
                     Query.Execute("UPDATE Assessment SET Title = '" + assessment.title + "', TotalMarks = '" + assessment.totalMarks + "', TotalWeightage = '" + assessment.totalWeightage + "' WHERE Id = '" + assessment.id + "'");
@@ -937,6 +953,10 @@ namespace DBMS_MiniProject
             get
             {
                 return id;
+            }
+            set
+            {
+                id = value;
             }
         }
 
@@ -988,6 +1008,10 @@ namespace DBMS_MiniProject
             {
                 return dateCreated;
             }
+            set
+            {
+                dateCreated = value;
+            }
         }
 
         public DateTime DateUpdated
@@ -995,6 +1019,10 @@ namespace DBMS_MiniProject
             get
             {
                 return dateUpdated;
+            }
+            set
+            {
+                dateUpdated = value;
             }
         }
 
@@ -1118,7 +1146,8 @@ namespace DBMS_MiniProject
                       (tempAssessmentComponent.rubricId != assessmentComponent.rubricId) ||
                       (tempAssessmentComponent.totalMarks != assessmentComponent.totalMarks) ||
                       (tempAssessmentComponent.assessmentId != assessmentComponent.assessmentId)
-                    )
+                    )&&
+                    (AssessmentComponent.getAssessmentComponent(assessmentComponent.name, assessmentComponent.assessmentId).id == -1 || AssessmentComponent.getAssessmentComponent(assessmentComponent.name, assessmentComponent.assessmentId).id == tempAssessmentComponent.id)
                   )
                 {
                     Query.Execute("UPDATE AssessmentComponent SET Name = '" + assessmentComponent.name + "', RubricId = '" + assessmentComponent.rubricId + "', TotalMarks = '" + assessmentComponent.totalMarks + "', AssessmentId = '" + assessmentComponent.assessmentId + "' WHERE Id = '" + assessmentComponent.id + "'");
@@ -1172,6 +1201,35 @@ namespace DBMS_MiniProject
             }
             con.Close();
             return assessmentComponentList;
+        }
+        public static List<AssessmentComponent> retrieveAssessmentComponents()
+        {
+            string conString = Query.connectionString;
+            SqlDataReader result = null;
+            List<AssessmentComponent> assessmentComponentList = new List<AssessmentComponent>();
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                string q = "SELECT * FROM AssessmentComponent ";
+                SqlCommand cmd = new SqlCommand(q, con);
+                result = cmd.ExecuteReader();
+                while (result.Read())
+                {
+                    AssessmentComponent assessmentComponent = new AssessmentComponent(result.GetString(1), result.GetInt32(2), result.GetInt32(3), result.GetInt32(6));
+                    assessmentComponent.id = result.GetInt32(0);
+                    assessmentComponent.dateCreated = result.GetDateTime(4);
+                    assessmentComponent.dateUpdated = result.GetDateTime(5);
+                    assessmentComponentList.Add(assessmentComponent);
+                }
+            }
+            con.Close();
+            return assessmentComponentList;
+        }
+        public static bool deleteAssessmentComponentById(int id)
+        {
+            if (Query.Execute("DELETE FROM AssessmentComponent WHERE Id = '" + id + "'") > 0) return true;
+            else return false;
         }
     }
     //ClassAttendance_Class------------------------------------------------------------
@@ -1669,6 +1727,34 @@ namespace DBMS_MiniProject
             if (Query.Execute("DELETE FROM Student WHERE Id = '" + id + "'") > 0) return true;
             else return false;
         }
+        public static Student getStudent(string contact, string email, string registrationNumber)
+        {
+            string conString = Query.connectionString;
+            SqlDataReader result = null;
+            Student student = new Student("Empty", "Empty", "Empty", "Empty", "Empty", -1);
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                string q = "SELECT * FROM Student WHERE Contact = '" + contact + "' AND Email = '"+email+"' AND RegistrationNumber = '"+registrationNumber+"'";
+                SqlCommand cmd = new SqlCommand(q, con);
+                result = cmd.ExecuteReader();
+                while (result.Read())
+                {
+                    student.id = result.GetInt32(0);
+                    student.firstName = result.GetString(1);
+                    student.lastName = result.GetString(2);
+                    student.contact = result.GetString(3);
+                    student.email = result.GetString(4);
+                    student.registrationNumber = result.GetString(5);
+                    student.status = result.GetInt32(6);
+
+                    break;
+                }
+            }
+            con.Close();
+            return student;
+        }
         public static Student getStudentByContact(string contact)
         {
             string conString = Query.connectionString;
@@ -1869,8 +1955,15 @@ namespace DBMS_MiniProject
                       (!tempStudent.email.Equals(student.email)) ||
                       (!tempStudent.registrationNumber.Equals(student.registrationNumber)) ||
                       (!(tempStudent.status == student.status))
-                    )
-                   )
+                    )&&
+                    (
+                      (
+                        Student.getStudentByContact(student.contact).id == -1 ||
+                        Student.getStudentByEmail(student.email).id == -1 ||
+                        Student.getStudentByRegistrationNumber(student.registrationNumber).id == -1
+                      ) ||
+                    (Student.getStudent(student.contact, student.email, student.registrationNumber).id == tempStudent.id))
+                  )
                 {
                     Query.Execute("UPDATE Student SET FirstName = '" + student.firstName + "', LastName = '" + student.lastName + "', Contact = '" + student.contact + "', Email = '" + student.email + "', RegistrationNumber = '" + student.registrationNumber + "', Status = '" + student.status + "' WHERE Id = '"+student.id+"'");
                     status = 2;

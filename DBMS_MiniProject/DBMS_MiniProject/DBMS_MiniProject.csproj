@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assessment Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assessment Form.Designer.cs">
+      <DependentUpon>Assessment Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssessmentComponent Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssessmentComponent Form.Designer.cs">
+      <DependentUpon>AssessmentComponent Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes.cs" />
     <Compile Include="CLO Form.cs">
       <SubType>Form</SubType>
@@ -78,6 +90,12 @@
     <Compile Include="Student Form.Designer.cs">
       <DependentUpon>Student Form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Assessment Form.resx">
+      <DependentUpon>Assessment Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssessmentComponent Form.resx">
+      <DependentUpon>AssessmentComponent Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CLO Form.resx">
       <DependentUpon>CLO Form.cs</DependentUpon>
     </EmbeddedResource>

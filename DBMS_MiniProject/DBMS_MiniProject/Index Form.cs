@@ -69,5 +69,17 @@ namespace DBMS_MiniProject
         {
 
         }
+
+        private void lbl_AssessmentForm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Assessment_Form.getInstance().Show();
+            this.Hide();
+        }
+
+        private void lnk_AssessmentComponent_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AssessmentComponent_Form.getInstance().Show();
+            this.Hide();
+        }
     }
 }
