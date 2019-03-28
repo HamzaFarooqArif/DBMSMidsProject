@@ -86,9 +86,9 @@
             this.lbl_Rubric.AutoSize = true;
             this.lbl_Rubric.Location = new System.Drawing.Point(16, 108);
             this.lbl_Rubric.Name = "lbl_Rubric";
-            this.lbl_Rubric.Size = new System.Drawing.Size(38, 13);
+            this.lbl_Rubric.Size = new System.Drawing.Size(47, 13);
             this.lbl_Rubric.TabIndex = 4;
-            this.lbl_Rubric.Text = "Rubric";
+            this.lbl_Rubric.Text = "RubricId";
             // 
             // cb_Rubric
             // 

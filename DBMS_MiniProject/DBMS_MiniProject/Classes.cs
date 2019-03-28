@@ -94,7 +94,7 @@ namespace DBMS_MiniProject
             this.dateCreated = DateTime.Now;
             this.dateUpdated = DateTime.Now;
         }
-        public static List<Rubric> checkDependancy(int id)
+        public static List<Rubric> checkDependancy(int Cloid)
         {
             string conString = Query.connectionString;
             SqlDataReader result = null;
@@ -103,7 +103,7 @@ namespace DBMS_MiniProject
             con.Open();
             if (con.State == System.Data.ConnectionState.Open)
             {
-                string q = "SELECT * FROM Rubric WHERE CloId = '" + id + "'";
+                string q = "SELECT * FROM Rubric WHERE CloId = '" + Cloid + "'";
                 SqlCommand cmd = new SqlCommand(q, con);
                 result = cmd.ExecuteReader();
                 while (result.Read())
@@ -349,8 +349,73 @@ namespace DBMS_MiniProject
         }
         public static bool deleteRubricById(int id)
         {
+            List<RubricLevel> rubricLevelList = Rubric.checkRubricLevelDependancy(id);
+            foreach (RubricLevel rbl in rubricLevelList)
+            {
+                RubricLevel.deleteRubricLevelById(rbl.Id);
+            }
+
+            List<AssessmentComponent> assessmentComponentList = Rubric.checkAssessmentComponentDependancy(id);
+            foreach (AssessmentComponent asc in assessmentComponentList)
+            {
+                AssessmentComponent.deleteAssessmentComponentById(asc.Id);
+            }
             if (Query.Execute("DELETE FROM Rubric WHERE Id = '" + id + "'") > 0) return true;
             else return false;
+        }
+        public static List<RubricLevel> checkRubricLevelDependancy(int rubricId)
+        {
+            string conString = Query.connectionString;
+            SqlDataReader result = null;
+            List<RubricLevel> rubricLevelList = new List<RubricLevel>();
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                string q = "SELECT * FROM RubricLevel WHERE RubricId = '" + rubricId + "'";
+                SqlCommand cmd = new SqlCommand(q, con);
+                result = cmd.ExecuteReader();
+                while (result.Read())
+                {
+                    RubricLevel rubricLevel = new RubricLevel(-1, "Empty", -1);
+                    rubricLevel.Id = result.GetInt32(0);
+                    rubricLevel.RubricId = result.GetInt32(1);
+                    rubricLevel.Details = result.GetString(2);
+                    rubricLevel.MeasurementLevel = result.GetInt32(3);
+
+                    rubricLevelList.Add(rubricLevel);
+                }
+            }
+            con.Close();
+            return rubricLevelList;
+        }
+        public static List<AssessmentComponent> checkAssessmentComponentDependancy(int rubricId)
+        {
+            string conString = Query.connectionString;
+            SqlDataReader result = null;
+            List<AssessmentComponent> assessmentComponentList = new List<AssessmentComponent>();
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                string q = "SELECT * FROM AssessmentComponent WHERE RubricId = '" + rubricId + "'";
+                SqlCommand cmd = new SqlCommand(q, con);
+                result = cmd.ExecuteReader();
+                while (result.Read())
+                {
+                    AssessmentComponent assessmentComponent = new AssessmentComponent("Empty", -1, -1, -1);
+                    assessmentComponent.Id = result.GetInt32(0);
+                    assessmentComponent.Name = result.GetString(1);
+                    assessmentComponent.RubricId = result.GetInt32(2);
+                    assessmentComponent.TotalMarks = result.GetInt32(3);
+                    assessmentComponent.DateCreated = result.GetDateTime(4);
+                    assessmentComponent.DateUpdated = result.GetDateTime(5);
+                    assessmentComponent.AssessmentId = result.GetInt32(6);
+                    assessmentComponentList.Add(assessmentComponent);
+                }
+            }
+            con.Close();
+            return assessmentComponentList;
         }
         public static Rubric getRubricById(int id)
         {

@@ -77,9 +77,9 @@
             this.lbl_Rubric.AutoSize = true;
             this.lbl_Rubric.Location = new System.Drawing.Point(25, 102);
             this.lbl_Rubric.Name = "lbl_Rubric";
-            this.lbl_Rubric.Size = new System.Drawing.Size(38, 13);
+            this.lbl_Rubric.Size = new System.Drawing.Size(47, 13);
             this.lbl_Rubric.TabIndex = 2;
-            this.lbl_Rubric.Text = "Rubric";
+            this.lbl_Rubric.Text = "RubricId";
             // 
             // lbl_Assessment
             // 
