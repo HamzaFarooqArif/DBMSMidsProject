@@ -526,6 +526,10 @@ namespace DBMS_MiniProject
             {
                 return id;
             }
+            set
+            {
+                id = value;
+            }
         }
 
         public int RubricId
@@ -533,6 +537,10 @@ namespace DBMS_MiniProject
             get
             {
                 return rubricId;
+            }
+            set
+            {
+                rubricId = value;
             }
         }
 
@@ -654,7 +662,8 @@ namespace DBMS_MiniProject
                       (tempRubricLevel.details != rubricLevel.details) ||
                       (tempRubricLevel.rubricId != rubricLevel.rubricId) ||
                       (tempRubricLevel.measurementLevel != rubricLevel.measurementLevel)
-                    )
+                    )&&
+                    (RubricLevel.getRubricLevel(rubricLevel.rubricId, rubricLevel.details, rubricLevel.measurementLevel).id == -1 || RubricLevel.getRubricLevel(rubricLevel.rubricId, rubricLevel.details, rubricLevel.measurementLevel).id == tempRubricLevel.id)
                   )
                 {
                     Query.Execute("UPDATE RubricLevel SET RubricId = '" + rubricLevel.rubricId + "', Details = '" + rubricLevel.details + "', MeasurementLevel = '" + rubricLevel.measurementLevel + "' WHERE Id = '" + rubricLevel.id + "'");
@@ -685,6 +694,28 @@ namespace DBMS_MiniProject
             con.Close();
             return status;
         }
+        public static List<RubricLevel> retrieveRubricLevels()
+        {
+            string conString = Query.connectionString;
+            SqlDataReader result = null;
+            List<RubricLevel> rubricLevelList = new List<RubricLevel>();
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                string q = "SELECT * FROM RubricLevel";
+                SqlCommand cmd = new SqlCommand(q, con);
+                result = cmd.ExecuteReader();
+                while (result.Read())
+                {
+                    RubricLevel rubricLevel = new RubricLevel(result.GetInt32(1), result.GetString(2), result.GetInt32(3));
+                    rubricLevel.id = result.GetInt32(0);
+                    rubricLevelList.Add(rubricLevel);
+                }
+            }
+            con.Close();
+            return rubricLevelList;
+        }
         public static List<RubricLevel> retrieveRubricLevels(int rubricId)
         {
             string conString = Query.connectionString;
@@ -706,6 +737,11 @@ namespace DBMS_MiniProject
             }
             con.Close();
             return rubricLevelList;
+        }
+        public static bool deleteRubricLevelById(int id)
+        {
+            if (Query.Execute("DELETE FROM RubricLevel WHERE Id = '" + id + "'") > 0) return true;
+            else return false;
         }
     }
     //Assessment_Class-------------------------------------------------------------------

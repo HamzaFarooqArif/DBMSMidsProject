@@ -81,5 +81,11 @@ namespace DBMS_MiniProject
             AssessmentComponent_Form.getInstance().Show();
             this.Hide();
         }
+
+        private void lnk_RubricLevel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RubricLevel_Form.getInstance().Show();
+            this.Hide();
+        }
     }
 }

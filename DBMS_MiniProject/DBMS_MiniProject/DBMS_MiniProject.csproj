@@ -84,6 +84,12 @@
     <Compile Include="Rubric Form.Designer.cs">
       <DependentUpon>Rubric Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="RubricLevel Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RubricLevel Form.Designer.cs">
+      <DependentUpon>RubricLevel Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </Compile>
     <EmbeddedResource Include="Rubric Form.resx">
       <DependentUpon>Rubric Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RubricLevel Form.resx">
+      <DependentUpon>RubricLevel Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student Form.resx">
       <DependentUpon>Student Form.cs</DependentUpon>

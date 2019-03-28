@@ -116,7 +116,10 @@ namespace DBMS_MiniProject
 
         private void cb_Rubric_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txt_RubricDetails.Text = Rubric.getRubricById(Int32.Parse(cb_Rubric.Text)).Details;
+            if(cb_Rubric.Text.Length > 0)
+            {
+                txt_RubricDetails.Text = Rubric.getRubricById(Int32.Parse(cb_Rubric.Text)).Details;
+            }
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
@@ -205,6 +208,12 @@ namespace DBMS_MiniProject
             updateDGVAssessmentComponent();
             loadBlank();
             currentObject.Id = -1;
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            Form1.getInstance().Show();
+            this.Hide();
         }
     }
 }

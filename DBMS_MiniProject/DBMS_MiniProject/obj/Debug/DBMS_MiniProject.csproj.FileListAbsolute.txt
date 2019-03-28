@@ -22,3 +22,4 @@ C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\obj\Debug
 C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.Rubric_Form.resources
 C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.Assessment_Form.resources
 C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.AssessmentComponent_Form.resources
+C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.RubricLevel_Form.resources
