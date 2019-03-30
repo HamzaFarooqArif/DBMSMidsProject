@@ -266,7 +266,7 @@ namespace DBMS_MiniProject
         }
     }
     //Rubric_Class-----------------------------------------------------------------------
-    class Rubric
+    public class Rubric
     {
         //Rubric_DataMembers-------------------------------------------------------------
         static int globalNextId;
@@ -577,7 +577,7 @@ namespace DBMS_MiniProject
         }
     }
     //RubricLevel_Class-------------------------------------------------------------------
-    class RubricLevel
+    public class RubricLevel
     {
         //RubricLevel_DataMembers----------------------------------------------------
         int id;
@@ -653,6 +653,30 @@ namespace DBMS_MiniProject
             if (con.State == System.Data.ConnectionState.Open)
             {
                 string q = "SELECT * FROM RubricLevel WHERE RubricId = '" + rubricId + "' AND Details = '" + details + "' AND MeasurementLevel = '" + measurementLevel + "'";
+                SqlCommand cmd = new SqlCommand(q, con);
+                result = cmd.ExecuteReader();
+                while (result.Read())
+                {
+                    rubricLevel.id = result.GetInt32(0);
+                    rubricLevel.rubricId = result.GetInt32(1);
+                    rubricLevel.details = result.GetString(2);
+                    rubricLevel.measurementLevel = result.GetInt32(3);
+                    break;
+                }
+            }
+            con.Close();
+            return rubricLevel;
+        }
+        public static RubricLevel getRubricLevel(int rubricId, int measurementLevel)
+        {
+            string conString = Query.connectionString;
+            SqlDataReader result = null;
+            RubricLevel rubricLevel = new RubricLevel(-1, "Empty", -1);
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                string q = "SELECT * FROM RubricLevel WHERE RubricId = '" + rubricId + "' AND MeasurementLevel = '" + measurementLevel + "'";
                 SqlCommand cmd = new SqlCommand(q, con);
                 result = cmd.ExecuteReader();
                 while (result.Read())
@@ -810,7 +834,7 @@ namespace DBMS_MiniProject
         }
     }
     //Assessment_Class-------------------------------------------------------------------
-    class Assessment
+    public class Assessment
     {
         //Assessment_DataMembers-------------------------------------------------------------
         int id;
@@ -1038,7 +1062,7 @@ namespace DBMS_MiniProject
         }
     }
     //AssessmentComponent_Class------------------------------------------------------------
-    class AssessmentComponent
+    public class AssessmentComponent
     {
         //AssessmentComponent_DataMembers--------------------------------------------------
         int id;
@@ -1303,6 +1327,7 @@ namespace DBMS_MiniProject
             con.Close();
             return assessmentComponentList;
         }
+        
         public static List<AssessmentComponent> retrieveAssessmentComponents()
         {
             string conString = Query.connectionString;
@@ -1710,7 +1735,7 @@ namespace DBMS_MiniProject
         }
     }
     //Student_Class----------------------------------------------------------------------
-    class Student
+    public class Student
     {
         //Student_DataMembers-------------------------------------------------------------
         int id;
@@ -2468,7 +2493,29 @@ namespace DBMS_MiniProject
             con.Close();
             return studentResultList;
         }
-     public static int addStudentResult(StudentResult studentResult, StudentResult updatedStudentResult)
+        public static List<StudentResult> retrieveStudentResults()
+        {
+            string conString = Query.connectionString;
+            SqlDataReader result = null;
+            List<StudentResult> studentResultList = new List<StudentResult>();
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                string q = "SELECT * FROM StudentResult ";
+                SqlCommand cmd = new SqlCommand(q, con);
+                result = cmd.ExecuteReader();
+                while (result.Read())
+                {
+                    StudentResult studentResult = new StudentResult(result.GetInt32(0), result.GetInt32(1), result.GetInt32(2), result.GetDateTime(3));
+
+                    studentResultList.Add(studentResult);
+                }
+            }
+            con.Close();
+            return studentResultList;
+        }
+        public static int addStudentResult(StudentResult studentResult, StudentResult updatedStudentResult)
         {
             int status = 0;
             string conString = Query.connectionString;
@@ -2479,7 +2526,7 @@ namespace DBMS_MiniProject
             con.Open();
             if (con.State == System.Data.ConnectionState.Open)
             {
-                string q = "SELECT * FROM StudentResult WHERE StudentId = '" + studentResult.studentId + "' AND AssessmentComponentId = '" + studentResult.assessmentComponentId + "'AND RubricMeasurementId = '" + studentResult.rubricMeasurementId + "'";
+                string q = "SELECT * FROM StudentResult WHERE StudentId = '" + studentResult.studentId + "' AND AssessmentComponentId = '" + studentResult.assessmentComponentId + "'";// AND RubricMeasurementId = '" + studentResult.rubricMeasurementId + "'";
                 SqlCommand cmd = new SqlCommand(q, con);
                 result = cmd.ExecuteReader();
                 while (result.Read())
@@ -2497,6 +2544,16 @@ namespace DBMS_MiniProject
             if (found)
             {
                 if (
+                    ((tempStudentResult.studentId != -1) && (tempStudentResult.assessmentComponentId != -1) && (tempStudentResult.rubricMeasurementId != -1)) &&
+                    (
+                      (tempStudentResult.rubricMeasurementId != updatedStudentResult.rubricMeasurementId)
+                    )
+                   )
+                {
+                    Query.Execute("UPDATE StudentResult SET RubricMeasurementId = '" + updatedStudentResult.rubricMeasurementId + "' WHERE StudentId = '" + studentResult.studentId + "' AND AssessmentComponentId = '" + studentResult.assessmentComponentId + "'");
+                    status = 2;
+                }
+                /*if (
                     ((tempStudentResult.studentId != -1) && (tempStudentResult.assessmentComponentId != -1) && (tempStudentResult.rubricMeasurementId != -1)) &&
                     (
                       (tempStudentResult.studentId != updatedStudentResult.studentId) ||
@@ -2540,14 +2597,14 @@ namespace DBMS_MiniProject
                         Query.Execute("UPDATE StudentResult SET StudentId = '" + updatedStudentResult.studentId + "' WHERE AssessmentComponentId = '" + studentResult.assessmentComponentId + "' AND RubricMeasurementId = '" + studentResult.rubricMeasurementId + "' AND YEAR(EvaluationDate) = '" + studentResult.evaluationDate.Year + "' AND Month(EvaluationDate) = '" + studentResult.evaluationDate.Month + "' AND DAY(EvaluationDate) = '" + studentResult.evaluationDate.Day + "'");
                     }
                     status = 2;
-                }
+                }*/
             }
             else
             {
                 bool shouldAdd = true;
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string q = "SELECT * FROM StudentResult WHERE StudentId = '" + studentResult.studentId + "' AND  AssessmentComponentId = '" + studentResult.assessmentComponentId + "' AND RubricMeasurementId = '" + studentResult.rubricMeasurementId + "'";
+                    string q = "SELECT * FROM StudentResult WHERE StudentId = '" + studentResult.studentId + "' AND  AssessmentComponentId = '" + studentResult.assessmentComponentId + "'";// AND RubricMeasurementId = '" + studentResult.rubricMeasurementId + "'";
                     SqlCommand cmd = new SqlCommand(q, con);
                     result = cmd.ExecuteReader();
                     while (result.Read())
@@ -2565,6 +2622,11 @@ namespace DBMS_MiniProject
             }
             con.Close();
             return status;
+        }
+        public static bool deleteStudentResult(int studentId, int assessmentComponentId)
+        {
+            if (Query.Execute("DELETE FROM StudentResult WHERE StudentId = '" + studentId + "' AND AssessmentComponentId = '"+ assessmentComponentId +"'") > 0) return true;
+            else return false;
         }
     }
 }

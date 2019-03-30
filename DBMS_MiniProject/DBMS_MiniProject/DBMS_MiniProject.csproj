@@ -96,6 +96,18 @@
     <Compile Include="Student Form.Designer.cs">
       <DependentUpon>Student Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentResult Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentResult Form.Designer.cs">
+      <DependentUpon>StudentResult Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentResultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="studentResultControl.Designer.cs">
+      <DependentUpon>studentResultControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Assessment Form.resx">
       <DependentUpon>Assessment Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +137,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Student Form.resx">
       <DependentUpon>Student Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentResult Form.resx">
+      <DependentUpon>StudentResult Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentResultControl.resx">
+      <DependentUpon>studentResultControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ProjectBDataSet.xsc">
       <DependentUpon>ProjectBDataSet.xsd</DependentUpon>

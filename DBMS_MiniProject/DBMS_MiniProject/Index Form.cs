@@ -87,5 +87,11 @@ namespace DBMS_MiniProject
             RubricLevel_Form.getInstance().Show();
             this.Hide();
         }
+
+        private void lbl_StudentResult_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            StudentResult_Form.getInstance().Show();
+            this.Hide();
+        }
     }
 }
