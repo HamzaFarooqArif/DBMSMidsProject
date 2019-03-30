@@ -25,3 +25,5 @@ C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\obj\Debug
 C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.RubricLevel_Form.resources
 C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.StudentResult_Form.resources
 C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.studentResultControl.resources
+C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.StudentAttendance_Form.resources
+C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.studentAttendanceControl.resources

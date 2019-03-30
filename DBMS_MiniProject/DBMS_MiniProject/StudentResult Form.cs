@@ -108,6 +108,11 @@ namespace DBMS_MiniProject
 
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
+            if (isBlank())
+            {
+                MessageBox.Show("Warning: Check Input Fields");
+                return;
+            }
             int added = 0;
             int updated = 0;
             
@@ -143,6 +148,11 @@ namespace DBMS_MiniProject
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
+            if (isBlank())
+            {
+                MessageBox.Show("Warning: Check Input Fields");
+                return;
+            }
             int result = 0;
             foreach(studentResultControl ctrl in flp_Student.Controls)
             {
@@ -183,6 +193,14 @@ namespace DBMS_MiniProject
                     flp_Student.Controls.Add(ctrl);
                 }
             }
+        }
+        private bool isBlank()
+        {
+            if (
+                string.IsNullOrWhiteSpace(cb_Assessment.Text) ||
+                string.IsNullOrWhiteSpace(cb_Student.Text)
+              ) return true;
+            else return false;
         }
     }
 }

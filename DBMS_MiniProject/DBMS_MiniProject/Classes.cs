@@ -1359,7 +1359,7 @@ namespace DBMS_MiniProject
         }
     }
     //ClassAttendance_Class------------------------------------------------------------
-    class ClassAttendance
+    public class ClassAttendance
     {
         //ClassAttendance_DataMembers--------------------------------------------------
         int id;
@@ -1402,6 +1402,28 @@ namespace DBMS_MiniProject
             if (con.State == System.Data.ConnectionState.Open)
             {
                 string q = "SELECT * FROM ClassAttendance WHERE Id = '" + id.ToString() + "'";
+                SqlCommand cmd = new SqlCommand(q, con);
+                result = cmd.ExecuteReader();
+                while (result.Read())
+                {
+                    classAttendance.id = result.GetInt32(0);
+                    classAttendance.attendanceDate = result.GetDateTime(1);
+                    break;
+                }
+            }
+            con.Close();
+            return classAttendance;
+        }
+        public static ClassAttendance getClassAttendanceByDate(DateTime date)
+        {
+            string conString = Query.connectionString;
+            SqlDataReader result = null;
+            ClassAttendance classAttendance = new ClassAttendance();
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                string q = "SELECT * FROM ClassAttendance WHERE YEAR(AttendanceDate) = '" + date.Year + "' AND MONTH(AttendanceDate) = '" + date.Month + "' AND DAY(AttendanceDate) = '" + date.Day + "'";
                 SqlCommand cmd = new SqlCommand(q, con);
                 result = cmd.ExecuteReader();
                 while (result.Read())
@@ -1501,7 +1523,7 @@ namespace DBMS_MiniProject
 
     }
     //Lookup_Class----------------------------------------------------------------------
-    class Lookup
+    public class Lookup
     {
         //Lookup_DataMembers-------------------------------------------------------------
         int lookupId;
@@ -2199,6 +2221,28 @@ namespace DBMS_MiniProject
             con.Close();
             return studentAttendance;
         }
+        public static List<StudentAttendance> retrieveStudentAttendances()
+        {
+            string conString = Query.connectionString;
+            SqlDataReader result = null;
+            List<StudentAttendance> studentAttendanceList = new List<StudentAttendance>();
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                string q = "SELECT * FROM StudentAttendance ";
+                SqlCommand cmd = new SqlCommand(q, con);
+                result = cmd.ExecuteReader();
+                while (result.Read())
+                {
+                    StudentAttendance studentAttendance = new StudentAttendance(result.GetInt32(0), result.GetInt32(1), result.GetInt32(2));
+
+                    studentAttendanceList.Add(studentAttendance);
+                }
+            }
+            con.Close();
+            return studentAttendanceList;
+        }
         public static List<StudentAttendance> retrieveStudentAttendancesByStudentId(int studentId)
         {
             string conString = Query.connectionString;
@@ -2274,12 +2318,13 @@ namespace DBMS_MiniProject
                 if (
                     ((tempStudentAttendance.attendanceId != -1) && (tempStudentAttendance.studentId != -1) && (tempStudentAttendance.attendanceStatus != -1)) &&
                     (
-                      (studentAttendance.attendanceId != updatedStudentAttendance.attendanceId) ||
-                      (studentAttendance.studentId != updatedStudentAttendance.studentId) ||
-                      (studentAttendance.attendanceStatus!= updatedStudentAttendance.attendanceStatus)
+                      (tempStudentAttendance.attendanceStatus != updatedStudentAttendance.attendanceStatus)
                     )
                    )
                 {
+                    Query.Execute("UPDATE StudentAttendance SET AttendanceStatus = '" + updatedStudentAttendance.attendanceStatus + "' WHERE StudentId = '" + studentAttendance.studentId + "' AND AttendanceId = '" + studentAttendance.attendanceId + "'");
+                    status = 2;
+                    /*
                     if (
                         (studentAttendance.studentId == updatedStudentAttendance.studentId) &&
                         (studentAttendance.attendanceId == updatedStudentAttendance.attendanceId)
@@ -2302,9 +2347,8 @@ namespace DBMS_MiniProject
                         Query.Execute("UPDATE StudentAttendance SET AttendanceId = '" + updatedStudentAttendance.attendanceId + "' WHERE StudentId = '" + studentAttendance.studentId + "' AND AttendanceStatus = '" + studentAttendance.attendanceStatus + "'");
                     }
 
-                    status = 2;
+                    status = 2;*/
                 }
-                
             }
             else
             {
@@ -2329,6 +2373,11 @@ namespace DBMS_MiniProject
             }
             con.Close();
             return status;
+        }
+        public static bool deleteStudentAttendance(int attendanceId, int studentId)
+        {
+            if (Query.Execute("DELETE FROM StudentAttendance WHERE StudentId = '" + studentId + "' AND AttendanceId = '" + attendanceId + "'") > 0) return true;
+            else return false;
         }
     }
     //StudentResult_Class----------------------------------------------------------------------
