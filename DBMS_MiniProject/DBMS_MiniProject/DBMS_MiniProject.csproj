@@ -171,6 +171,7 @@
     <EmbeddedResource Include="studentResultControl.resx">
       <DependentUpon>studentResultControl.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="ProjectBDataSet.xsc">
       <DependentUpon>ProjectBDataSet.xsd</DependentUpon>
     </None>

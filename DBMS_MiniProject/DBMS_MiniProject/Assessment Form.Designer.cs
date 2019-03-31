@@ -180,7 +180,7 @@
             this.btn_Add.Location = new System.Drawing.Point(3, 3);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(156, 29);
-            this.btn_Add.TabIndex = 7;
+            this.btn_Add.TabIndex = 0;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.button1_Click);
@@ -191,7 +191,7 @@
             this.btn_Update.Location = new System.Drawing.Point(165, 3);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(156, 29);
-            this.btn_Update.TabIndex = 8;
+            this.btn_Update.TabIndex = 1;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = true;
             this.btn_Update.Click += new System.EventHandler(this.button2_Click);
@@ -202,7 +202,7 @@
             this.btn_Delete.Location = new System.Drawing.Point(327, 3);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(156, 29);
-            this.btn_Delete.TabIndex = 9;
+            this.btn_Delete.TabIndex = 2;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
@@ -213,7 +213,7 @@
             this.btn_Exit.Location = new System.Drawing.Point(489, 3);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(158, 29);
-            this.btn_Exit.TabIndex = 10;
+            this.btn_Exit.TabIndex = 3;
             this.btn_Exit.Text = "Exit To Home";
             this.btn_Exit.UseVisualStyleBackColor = true;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
@@ -270,7 +270,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(650, 35);
-            this.tableLayoutPanel2.TabIndex = 22;
+            this.tableLayoutPanel2.TabIndex = 3;
             // 
             // tableLayoutPanel3
             // 
@@ -285,7 +285,7 @@
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(545, 28);
-            this.tableLayoutPanel3.TabIndex = 23;
+            this.tableLayoutPanel3.TabIndex = 2;
             // 
             // lbl_Validation3
             // 
@@ -311,7 +311,7 @@
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(545, 27);
-            this.tableLayoutPanel4.TabIndex = 24;
+            this.tableLayoutPanel4.TabIndex = 0;
             // 
             // lbl_Validation1
             // 
@@ -337,7 +337,7 @@
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(545, 27);
-            this.tableLayoutPanel5.TabIndex = 24;
+            this.tableLayoutPanel5.TabIndex = 1;
             // 
             // lbl_Validation2
             // 

@@ -106,6 +106,7 @@
             // 
             this.txt_Contact.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_Contact.Location = new System.Drawing.Point(3, 3);
+            this.txt_Contact.MaxLength = 50;
             this.txt_Contact.Name = "txt_Contact";
             this.txt_Contact.Size = new System.Drawing.Size(554, 20);
             this.txt_Contact.TabIndex = 0;
@@ -115,6 +116,7 @@
             // 
             this.txt_Email.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_Email.Location = new System.Drawing.Point(3, 3);
+            this.txt_Email.MaxLength = 50;
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(554, 20);
             this.txt_Email.TabIndex = 0;
@@ -165,6 +167,7 @@
             // 
             this.txt_RegistrationNumber.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_RegistrationNumber.Location = new System.Drawing.Point(3, 3);
+            this.txt_RegistrationNumber.MaxLength = 50;
             this.txt_RegistrationNumber.Name = "txt_RegistrationNumber";
             this.txt_RegistrationNumber.Size = new System.Drawing.Size(554, 20);
             this.txt_RegistrationNumber.TabIndex = 0;

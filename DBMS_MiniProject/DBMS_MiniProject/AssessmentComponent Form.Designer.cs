@@ -128,21 +128,23 @@
             // cb_Rubric
             // 
             this.cb_Rubric.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cb_Rubric.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Rubric.FormattingEnabled = true;
             this.cb_Rubric.Location = new System.Drawing.Point(81, 57);
             this.cb_Rubric.Name = "cb_Rubric";
             this.cb_Rubric.Size = new System.Drawing.Size(771, 21);
-            this.cb_Rubric.TabIndex = 6;
+            this.cb_Rubric.TabIndex = 2;
             this.cb_Rubric.SelectedIndexChanged += new System.EventHandler(this.cb_Rubric_SelectedIndexChanged);
             // 
             // cb_Assessment
             // 
             this.cb_Assessment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cb_Assessment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Assessment.FormattingEnabled = true;
             this.cb_Assessment.Location = new System.Drawing.Point(81, 111);
             this.cb_Assessment.Name = "cb_Assessment";
             this.cb_Assessment.Size = new System.Drawing.Size(771, 21);
-            this.cb_Assessment.TabIndex = 7;
+            this.cb_Assessment.TabIndex = 4;
             // 
             // dgv_AssessmentComponent
             // 
@@ -163,7 +165,7 @@
             this.dgv_AssessmentComponent.Location = new System.Drawing.Point(12, 224);
             this.dgv_AssessmentComponent.Name = "dgv_AssessmentComponent";
             this.dgv_AssessmentComponent.Size = new System.Drawing.Size(855, 137);
-            this.dgv_AssessmentComponent.TabIndex = 8;
+            this.dgv_AssessmentComponent.TabIndex = 0;
             this.dgv_AssessmentComponent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_AssessmentComponent_CellContentClick);
             // 
             // Column1
@@ -226,7 +228,7 @@
             this.txt_RubricDetails.Name = "txt_RubricDetails";
             this.txt_RubricDetails.ReadOnly = true;
             this.txt_RubricDetails.Size = new System.Drawing.Size(771, 20);
-            this.txt_RubricDetails.TabIndex = 10;
+            this.txt_RubricDetails.TabIndex = 3;
             // 
             // btn_Add
             // 
@@ -234,7 +236,7 @@
             this.btn_Add.Location = new System.Drawing.Point(3, 3);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(207, 24);
-            this.btn_Add.TabIndex = 11;
+            this.btn_Add.TabIndex = 0;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
@@ -245,7 +247,7 @@
             this.btn_Update.Location = new System.Drawing.Point(216, 3);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(207, 24);
-            this.btn_Update.TabIndex = 12;
+            this.btn_Update.TabIndex = 1;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = true;
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
@@ -256,7 +258,7 @@
             this.btn_Delete.Location = new System.Drawing.Point(429, 3);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(207, 24);
-            this.btn_Delete.TabIndex = 13;
+            this.btn_Delete.TabIndex = 2;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
@@ -267,7 +269,7 @@
             this.btn_Exit.Location = new System.Drawing.Point(642, 3);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(210, 24);
-            this.btn_Exit.TabIndex = 14;
+            this.btn_Exit.TabIndex = 3;
             this.btn_Exit.Text = "Exit To Home";
             this.btn_Exit.UseVisualStyleBackColor = true;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
@@ -298,7 +300,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(855, 136);
-            this.tableLayoutPanel1.TabIndex = 15;
+            this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
@@ -319,7 +321,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(855, 30);
-            this.tableLayoutPanel2.TabIndex = 16;
+            this.tableLayoutPanel2.TabIndex = 0;
             // 
             // lbl_Heading
             // 
@@ -345,7 +347,7 @@
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(771, 21);
-            this.tableLayoutPanel3.TabIndex = 22;
+            this.tableLayoutPanel3.TabIndex = 1;
             // 
             // lbl_Validation2
             // 
@@ -371,7 +373,7 @@
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(771, 21);
-            this.tableLayoutPanel4.TabIndex = 23;
+            this.tableLayoutPanel4.TabIndex = 0;
             // 
             // lbl_Validation1
             // 

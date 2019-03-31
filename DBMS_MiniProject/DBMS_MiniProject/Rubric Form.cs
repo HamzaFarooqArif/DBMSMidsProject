@@ -94,7 +94,8 @@ namespace DBMS_MiniProject
         {
             if (
                 string.IsNullOrWhiteSpace(txt_Details.Text) ||
-                string.IsNullOrWhiteSpace(cb_Clo.Text)
+                string.IsNullOrWhiteSpace(cb_Clo.Text) ||
+                !validateForm()
                ) return true;
             else return false;
         }
@@ -184,7 +185,27 @@ namespace DBMS_MiniProject
         {
 
         }
+        private bool validateForm()
+        {
+            bool isValid = true;
 
-        
+            if (Validation.validateTitle(txt_Details.Text))
+            {
+                lbl_Validation1.Text = "Valid";
+                lbl_Validation1.ForeColor = Color.Green;
+            }
+            else
+            {
+                lbl_Validation1.Text = "Invalid";
+                lbl_Validation1.ForeColor = Color.Red;
+                isValid = false;
+            }
+            return isValid;
+        }
+
+        private void txt_Details_TextChanged(object sender, EventArgs e)
+        {
+            validateForm();
+        }
     }
 }

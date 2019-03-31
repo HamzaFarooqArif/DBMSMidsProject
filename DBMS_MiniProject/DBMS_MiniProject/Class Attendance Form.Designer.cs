@@ -50,10 +50,10 @@
             // 
             this.dtp_ClassAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtp_ClassAttendance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_ClassAttendance.Location = new System.Drawing.Point(177, 3);
+            this.dtp_ClassAttendance.Location = new System.Drawing.Point(41, 3);
             this.dtp_ClassAttendance.Name = "dtp_ClassAttendance";
-            this.dtp_ClassAttendance.Size = new System.Drawing.Size(169, 20);
-            this.dtp_ClassAttendance.TabIndex = 2;
+            this.dtp_ClassAttendance.Size = new System.Drawing.Size(305, 20);
+            this.dtp_ClassAttendance.TabIndex = 0;
             // 
             // btn_Confirm
             // 
@@ -61,7 +61,7 @@
             this.btn_Confirm.Location = new System.Drawing.Point(3, 3);
             this.btn_Confirm.Name = "btn_Confirm";
             this.btn_Confirm.Size = new System.Drawing.Size(81, 24);
-            this.btn_Confirm.TabIndex = 3;
+            this.btn_Confirm.TabIndex = 0;
             this.btn_Confirm.Text = "Add";
             this.btn_Confirm.UseVisualStyleBackColor = true;
             this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
@@ -72,7 +72,7 @@
             this.btn_Delete.Location = new System.Drawing.Point(177, 3);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(81, 24);
-            this.btn_Delete.TabIndex = 4;
+            this.btn_Delete.TabIndex = 2;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click_1);
@@ -91,7 +91,7 @@
             this.dgv_ClassAttendance.Location = new System.Drawing.Point(12, 107);
             this.dgv_ClassAttendance.Name = "dgv_ClassAttendance";
             this.dgv_ClassAttendance.Size = new System.Drawing.Size(349, 142);
-            this.dgv_ClassAttendance.TabIndex = 5;
+            this.dgv_ClassAttendance.TabIndex = 2;
             this.dgv_ClassAttendance.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ClassAttendance_CellContentClick);
             // 
             // Column1
@@ -117,7 +117,7 @@
             this.btn_Exit.Location = new System.Drawing.Point(264, 3);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(82, 24);
-            this.btn_Exit.TabIndex = 6;
+            this.btn_Exit.TabIndex = 3;
             this.btn_Exit.Text = "Exit To Home";
             this.btn_Exit.UseVisualStyleBackColor = true;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
@@ -128,7 +128,7 @@
             this.btn_Update.Location = new System.Drawing.Point(90, 3);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(81, 24);
-            this.btn_Update.TabIndex = 7;
+            this.btn_Update.TabIndex = 1;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = true;
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
@@ -148,17 +148,16 @@
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.lbl_Date, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dtp_ClassAttendance, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 37);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(349, 28);
-            this.tableLayoutPanel1.TabIndex = 9;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lbl_Heading
             // 
@@ -190,7 +189,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(349, 30);
-            this.tableLayoutPanel2.TabIndex = 14;
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // Class_Attendance_Form
             // 

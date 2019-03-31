@@ -46,7 +46,7 @@ namespace DBMS_MiniProject
 
         private void CLO_Form_Load(object sender, EventArgs e)
         {
-            
+
         }
         private void updateDGVClo()
         {
@@ -78,14 +78,15 @@ namespace DBMS_MiniProject
         private bool isBlank()
         {
             if (
-                string.IsNullOrWhiteSpace(txt_Name.Text)
+                string.IsNullOrWhiteSpace(txt_Name.Text) ||
+                !validateForm()
               ) return true;
             else return false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            validateForm();
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
@@ -164,6 +165,23 @@ namespace DBMS_MiniProject
         {
             Form1.getInstance().Show();
             this.Hide();
+        }
+        private bool validateForm()
+        {
+            bool isValid = true;
+
+            if (Validation.validateTitle(txt_Name.Text))
+            {
+                lbl_Validation1.Text = "Valid";
+                lbl_Validation1.ForeColor = Color.Green;
+            }
+            else
+            {
+                lbl_Validation1.Text = "Invalid";
+                lbl_Validation1.ForeColor = Color.Red;
+                isValid = false;
+            }
+            return isValid;
         }
     }
 }

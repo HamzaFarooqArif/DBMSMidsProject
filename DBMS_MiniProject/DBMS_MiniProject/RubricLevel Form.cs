@@ -93,7 +93,8 @@ namespace DBMS_MiniProject
                 string.IsNullOrWhiteSpace(txt_Details.Text) ||
                 string.IsNullOrWhiteSpace(txt_MeasurementLevel.Text) ||
                 string.IsNullOrWhiteSpace(txt_RubricDetails.Text) ||
-                string.IsNullOrWhiteSpace(cb_Rubric.Text)
+                string.IsNullOrWhiteSpace(cb_Rubric.Text) ||
+                !validateForm()
                ) return true;
             else return false;
         }
@@ -188,6 +189,45 @@ namespace DBMS_MiniProject
         {
             Form1.getInstance().Show();
             this.Hide();
+        }
+        private bool validateForm()
+        {
+            bool isValid = true;
+
+            if (Validation.validateTitle(txt_Details.Text))
+            {
+                lbl_Validation1.Text = "Valid";
+                lbl_Validation1.ForeColor = Color.Green;
+            }
+            else
+            {
+                lbl_Validation1.Text = "Invalid";
+                lbl_Validation1.ForeColor = Color.Red;
+                isValid = false;
+            }
+
+            if (Validation.validateMarks(txt_MeasurementLevel.Text))
+            {
+                lbl_Validation2.Text = "Valid";
+                lbl_Validation2.ForeColor = Color.Green;
+            }
+            else
+            {
+                lbl_Validation2.Text = "Invalid";
+                lbl_Validation2.ForeColor = Color.Red;
+                isValid = false;
+            }
+            return isValid;
+        }
+
+        private void txt_Details_TextChanged(object sender, EventArgs e)
+        {
+            validateForm();
+        }
+
+        private void txt_MeasurementLevel_TextChanged(object sender, EventArgs e)
+        {
+            validateForm();
         }
     }
 }

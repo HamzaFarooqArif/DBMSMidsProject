@@ -79,21 +79,23 @@
             // cb_Assessment
             // 
             this.cb_Assessment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cb_Assessment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Assessment.FormattingEnabled = true;
             this.cb_Assessment.Location = new System.Drawing.Point(80, 3);
             this.cb_Assessment.Name = "cb_Assessment";
             this.cb_Assessment.Size = new System.Drawing.Size(537, 21);
-            this.cb_Assessment.TabIndex = 2;
+            this.cb_Assessment.TabIndex = 0;
             this.cb_Assessment.SelectedIndexChanged += new System.EventHandler(this.cb_Assessment_SelectedIndexChanged);
             // 
             // cb_Student
             // 
             this.cb_Student.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cb_Student.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Student.FormattingEnabled = true;
             this.cb_Student.Location = new System.Drawing.Point(80, 36);
             this.cb_Student.Name = "cb_Student";
             this.cb_Student.Size = new System.Drawing.Size(537, 21);
-            this.cb_Student.TabIndex = 3;
+            this.cb_Student.TabIndex = 1;
             this.cb_Student.SelectedIndexChanged += new System.EventHandler(this.cb_Student_SelectedIndexChanged);
             // 
             // flp_Student
@@ -101,7 +103,7 @@
             this.flp_Student.Location = new System.Drawing.Point(3, 3);
             this.flp_Student.Name = "flp_Student";
             this.flp_Student.Size = new System.Drawing.Size(499, 180);
-            this.flp_Student.TabIndex = 4;
+            this.flp_Student.TabIndex = 0;
             // 
             // btn_Exit
             // 
@@ -120,7 +122,7 @@
             this.btn_Confirm.Location = new System.Drawing.Point(3, 3);
             this.btn_Confirm.Name = "btn_Confirm";
             this.btn_Confirm.Size = new System.Drawing.Size(201, 61);
-            this.btn_Confirm.TabIndex = 6;
+            this.btn_Confirm.TabIndex = 0;
             this.btn_Confirm.Text = "Confirm";
             this.btn_Confirm.UseVisualStyleBackColor = true;
             this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
@@ -141,7 +143,7 @@
             this.dgv_StudentResult.Location = new System.Drawing.Point(508, 3);
             this.dgv_StudentResult.Name = "dgv_StudentResult";
             this.dgv_StudentResult.Size = new System.Drawing.Size(745, 180);
-            this.dgv_StudentResult.TabIndex = 7;
+            this.dgv_StudentResult.TabIndex = 1;
             this.dgv_StudentResult.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_StudentResult_CellContentClick);
             // 
             // Column1
@@ -189,7 +191,7 @@
             this.btn_Delete.Location = new System.Drawing.Point(210, 3);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(201, 61);
-            this.btn_Delete.TabIndex = 8;
+            this.btn_Delete.TabIndex = 1;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
@@ -210,7 +212,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(620, 67);
-            this.tableLayoutPanel1.TabIndex = 9;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
@@ -227,7 +229,7 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(621, 67);
-            this.tableLayoutPanel2.TabIndex = 10;
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // lbl_Heading
             // 
@@ -255,7 +257,7 @@
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1256, 186);
-            this.tableLayoutPanel3.TabIndex = 13;
+            this.tableLayoutPanel3.TabIndex = 1;
             // 
             // tableLayoutPanel4
             // 
@@ -272,7 +274,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1253, 73);
-            this.tableLayoutPanel4.TabIndex = 14;
+            this.tableLayoutPanel4.TabIndex = 0;
             // 
             // StudentResult_Form
             // 
