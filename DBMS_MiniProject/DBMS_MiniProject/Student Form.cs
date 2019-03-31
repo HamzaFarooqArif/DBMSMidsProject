@@ -206,5 +206,10 @@ namespace DBMS_MiniProject
             Form1.getInstance().Show();
             this.Hide();
         }
+
+        private void lbl_Email_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1886,6 +1886,18 @@ namespace DBMS_MiniProject
         }
         public static bool deleteStudentById(int id)
         {
+            List<StudentResult> studentResultList = StudentResult.retrieveStudentResultByStudentId(id);
+            foreach(StudentResult sr in studentResultList)
+            {
+                StudentResult.deleteStudentResult(sr.StudentId, sr.AssessmentComponentId);
+            }
+
+            List<StudentAttendance> studentAttendanceList = StudentAttendance.retrieveStudentAttendancesByStudentId(id);
+            foreach(StudentAttendance sa in studentAttendanceList)
+            {
+                StudentAttendance.deleteStudentAttendance(sa.AttendanceId, sa.StudentId);
+            }
+
             if (Query.Execute("DELETE FROM Student WHERE Id = '" + id + "'") > 0) return true;
             else return false;
         }
