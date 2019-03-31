@@ -99,5 +99,11 @@ namespace DBMS_MiniProject
             StudentAttendance_Form.getInstance().Show();
             this.Hide();
         }
+
+        private void lnk_ClassAttendance_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Class_Attendance_Form.getInstance().Show();
+            this.Hide();
+        }
     }
 }

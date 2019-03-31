@@ -1371,6 +1371,10 @@ namespace DBMS_MiniProject
             {
                 return id;
             }
+            set
+            {
+                id = value;
+            }
         }
 
         public DateTime AttendanceDate
@@ -1519,6 +1523,16 @@ namespace DBMS_MiniProject
             }
             con.Close();
             return status;
+        }
+        public static bool deleteClassAttendanceById(int id)
+        {
+            List<StudentAttendance> studentAttendanceList = StudentAttendance.retrieveStudentAttendancesByAttendanceId(id);
+            foreach(StudentAttendance sta in studentAttendanceList)
+            {
+                StudentAttendance.deleteStudentAttendance(sta.AttendanceId, sta.StudentId);
+            }
+            if (Query.Execute("DELETE FROM ClassAttendance WHERE Id = '" + id + "'") > 0) return true;
+            else return false;
         }
 
     }
