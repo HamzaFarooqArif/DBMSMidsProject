@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace DBMS_MiniProject
 {
@@ -941,6 +942,11 @@ namespace DBMS_MiniProject
         }
         public static bool deleteAssessmentById(int id)
         {
+            List<AssessmentComponent> assessmentComponentList = AssessmentComponent.retrieveAssessmentComponents(id);
+            foreach(AssessmentComponent ac in assessmentComponentList)
+            {
+                AssessmentComponent.deleteAssessmentComponentById(ac.Id);
+            }
             if (Query.Execute("DELETE FROM Assessment WHERE Id = '" + id + "'") > 0) return true;
             else return false;
         }
@@ -993,6 +999,7 @@ namespace DBMS_MiniProject
             con.Close();
             return assessmentList;
         }
+
         public static int addAssessment(Assessment assessment)
         {
             int status = 0;
@@ -2703,5 +2710,52 @@ namespace DBMS_MiniProject
             if (Query.Execute("DELETE FROM StudentResult WHERE StudentId = '" + studentId + "' AND AssessmentComponentId = '"+ assessmentComponentId +"'") > 0) return true;
             else return false;
         }
+    }
+    public class Validation
+    {
+        public static bool validateName(string str)
+        {
+            if (!Regex.Match(str, "^[A-Za-z ]+$").Success)
+            {
+                return false;
+            }
+            return true;
+        }
+        public static bool validatePhone(string Phone)
+        {
+            if (string.IsNullOrEmpty(Phone))
+                return false;
+            var r = new Regex(@"^\(?([0-9]{4})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$");
+            return r.IsMatch(Phone);
+        }
+        public static bool validateRegistration(string Registration)
+        {
+            if (string.IsNullOrEmpty(Registration))
+                return false;
+            var r = new Regex(@"^\(?([1-9]{1})\)?([0-9]{3})[-]([A-Z]{2,3})[-]([0-9]{1,4})$");
+            return r.IsMatch(Registration);
+        }
+        public static bool validateEmail(string Email)
+        {
+            if (string.IsNullOrEmpty(Email))
+                return false;
+            var r = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            return r.IsMatch(Email);
+        }
+        public static bool validateTitle(string Title)
+        {
+            if (string.IsNullOrEmpty(Title))
+                return false;
+            var r = new Regex(@"^[a-zA-Z0-9 ]+$");
+            return r.IsMatch(Title);
+        }
+        public static bool validateMarks(string Marks)
+        {
+            if (string.IsNullOrEmpty(Marks))
+                return false;
+            var r = new Regex(@"^[0-9]+$");
+            return r.IsMatch(Marks);
+        }
+
     }
 }

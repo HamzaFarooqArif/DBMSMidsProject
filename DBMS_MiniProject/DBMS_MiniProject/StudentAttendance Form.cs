@@ -58,13 +58,16 @@ namespace DBMS_MiniProject
             List<Student> studentList = Student.retrieveStudents();
             foreach(Student st in studentList)
             {
-                int month = Int32.Parse(cb_ClassAttendance.Text.Split('/')[0]);
-                int day = Int32.Parse(cb_ClassAttendance.Text.Split('/')[1]);
-                int year = Int32.Parse(cb_ClassAttendance.Text.Split('/')[2]);
+                if(!string.IsNullOrWhiteSpace(cb_ClassAttendance.Text))
+                {
+                    int month = Int32.Parse(cb_ClassAttendance.Text.Split('/')[0]);
+                    int day = Int32.Parse(cb_ClassAttendance.Text.Split('/')[1]);
+                    int year = Int32.Parse(cb_ClassAttendance.Text.Split('/')[2]);
 
-                DateTime date = new DateTime(year, month, day);
-                studentAttendanceControl ctrl = new studentAttendanceControl(st, ClassAttendance.getClassAttendanceByDate(date));
-                flp_StudentAttendance.Controls.Add(ctrl);
+                    DateTime date = new DateTime(year, month, day);
+                    studentAttendanceControl ctrl = new studentAttendanceControl(st, ClassAttendance.getClassAttendanceByDate(date));
+                    flp_StudentAttendance.Controls.Add(ctrl);
+                }
             }
         }
         private StudentAttendance_Form()

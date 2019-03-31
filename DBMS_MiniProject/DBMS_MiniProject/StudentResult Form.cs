@@ -57,12 +57,17 @@ namespace DBMS_MiniProject
         }
         public static Assessment getAssessment()
         {
-            if(studentResult_Form.cb_Assessment.SelectedItem == null)
+            if (studentResult_Form.cb_Assessment.Items.Count > 0)
             {
-                studentResult_Form.cb_Assessment.SelectedItem = studentResult_Form.cb_Assessment.Items[0];
+                if (studentResult_Form.cb_Assessment.SelectedItem == null)
+                {
+                    studentResult_Form.cb_Assessment.SelectedItem = studentResult_Form.cb_Assessment.Items[0];
+                }
+                Assessment result = Assessment.getAssessment(studentResult_Form.cb_Assessment.SelectedItem.ToString());
+                return result;
             }
-            Assessment result = Assessment.getAssessment(studentResult_Form.cb_Assessment.SelectedItem.ToString());
-            return result;
+            Assessment ast = new Assessment("Empty", -1, -1);
+            return ast;
         }
 
         public StudentResult_Form()

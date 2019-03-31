@@ -113,7 +113,8 @@ namespace DBMS_MiniProject
                 string.IsNullOrWhiteSpace(txt_Contact.Text) ||
                 string.IsNullOrWhiteSpace(txt_Email.Text) ||
                 string.IsNullOrWhiteSpace(txt_RegistrationNumber.Text) ||
-                string.IsNullOrWhiteSpace(cb_status.Text)
+                string.IsNullOrWhiteSpace(cb_status.Text) ||
+                !validateForm()
               ) return true;
             else return false;
         }
@@ -162,6 +163,7 @@ namespace DBMS_MiniProject
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
+            bool temp = Validation.validateEmail(txt_FirstName.Text);
             if (isBlank())
             {
                 MessageBox.Show("Warning: Check Input Fields");
@@ -210,6 +212,116 @@ namespace DBMS_MiniProject
         private void lbl_Email_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+        private bool validateForm()
+        {
+            bool isValid = true;
+
+            if (Validation.validateName(txt_FirstName.Text))
+            {
+                lbl_Validation1.Text = "Valid";
+                lbl_Validation1.ForeColor = Color.Green;
+            }
+            else
+            {
+                lbl_Validation1.Text = "Invalid";
+                lbl_Validation1.ForeColor = Color.Red;
+                isValid = false;
+            }
+
+            if (Validation.validateName(txt_LastName.Text))
+            {
+                lbl_Validation2.Text = "Valid";
+                lbl_Validation2.ForeColor = Color.Green;
+            }
+            else
+            {
+                lbl_Validation2.Text = "Invalid";
+                lbl_Validation2.ForeColor = Color.Red;
+                isValid = false;
+            }
+
+            if (Validation.validatePhone(txt_Contact.Text))
+            {
+                lbl_Validation3.Text = "Valid";
+                lbl_Validation3.ForeColor = Color.Green;
+            }
+            else
+            {
+                lbl_Validation3.Text = "Invalid";
+                lbl_Validation3.ForeColor = Color.Red;
+                isValid = false;
+            }
+
+            if (Validation.validateEmail(txt_Email.Text))
+            {
+                lbl_Validation4.Text = "Valid";
+                lbl_Validation4.ForeColor = Color.Green;
+            }
+            else
+            {
+                lbl_Validation4.Text = "Invalid";
+                lbl_Validation4.ForeColor = Color.Red;
+                isValid = false;
+            }
+
+            if (Validation.validateRegistration(txt_RegistrationNumber.Text))
+            {
+                lbl_Validation5.Text = "Valid";
+                lbl_Validation5.ForeColor = Color.Green;
+            }
+            else
+            {
+                lbl_Validation5.Text = "Invalid";
+                lbl_Validation5.ForeColor = Color.Red;
+                isValid = false;
+            }
+            return isValid;
+        }
+
+        private void Student_Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void Student_Form_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txt_FirstName_TextChanged(object sender, EventArgs e)
+        {
+            validateForm();
+        }
+
+        private void txt_LastName_TextChanged(object sender, EventArgs e)
+        {
+            validateForm();
+        }
+
+        private void txt_Contact_TextChanged(object sender, EventArgs e)
+        {
+            validateForm();
+        }
+
+        private void txt_Email_TextChanged(object sender, EventArgs e)
+        {
+            validateForm();
+        }
+
+        private void txt_RegistrationNumber_TextChanged(object sender, EventArgs e)
+        {
+            validateForm();
         }
     }
 }

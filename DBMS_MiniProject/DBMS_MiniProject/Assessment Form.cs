@@ -89,7 +89,8 @@ namespace DBMS_MiniProject
             if (
                 string.IsNullOrWhiteSpace(txt_Title.Text) ||
                 string.IsNullOrWhiteSpace(txt_TotalMarks.Text) ||
-                string.IsNullOrWhiteSpace(txt_TotalWeightage.Text)
+                string.IsNullOrWhiteSpace(txt_TotalWeightage.Text) ||
+                !validateForm()
                ) return true;
             else return false;
         }
@@ -155,7 +156,7 @@ namespace DBMS_MiniProject
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            validateForm();
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
@@ -181,6 +182,57 @@ namespace DBMS_MiniProject
         {
             Form1.getInstance().Show();
             this.Hide();
+        }
+        private bool validateForm()
+        {
+            bool isValid = true;
+
+            if (Validation.validateTitle(txt_Title.Text))
+            {
+                lbl_Validation1.Text = "Valid";
+                lbl_Validation1.ForeColor = Color.Green;
+            }
+            else
+            {
+                lbl_Validation1.Text = "Invalid";
+                lbl_Validation1.ForeColor = Color.Red;
+                isValid = false;
+            }
+
+            if (Validation.validateMarks(txt_TotalMarks.Text))
+            {
+                lbl_Validation2.Text = "Valid";
+                lbl_Validation2.ForeColor = Color.Green;
+            }
+            else
+            {
+                lbl_Validation2.Text = "Invalid";
+                lbl_Validation2.ForeColor = Color.Red;
+                isValid = false;
+            }
+
+            if (Validation.validateMarks(txt_TotalWeightage.Text))
+            {
+                lbl_Validation3.Text = "Valid";
+                lbl_Validation3.ForeColor = Color.Green;
+            }
+            else
+            {
+                lbl_Validation3.Text = "Invalid";
+                lbl_Validation3.ForeColor = Color.Red;
+                isValid = false;
+            }
+            return isValid;
+        }
+
+        private void txt_TotalMarks_TextChanged(object sender, EventArgs e)
+        {
+            validateForm();
+        }
+
+        private void txt_TotalWeightage_TextChanged(object sender, EventArgs e)
+        {
+            validateForm();
         }
     }
 }

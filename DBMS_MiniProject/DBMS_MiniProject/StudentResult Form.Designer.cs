@@ -106,9 +106,9 @@
             // btn_Exit
             // 
             this.btn_Exit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Exit.Location = new System.Drawing.Point(415, 3);
+            this.btn_Exit.Location = new System.Drawing.Point(417, 3);
             this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(203, 61);
+            this.btn_Exit.Size = new System.Drawing.Size(201, 61);
             this.btn_Exit.TabIndex = 5;
             this.btn_Exit.Text = "Exit To Home";
             this.btn_Exit.UseVisualStyleBackColor = true;
@@ -119,7 +119,7 @@
             this.btn_Confirm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Confirm.Location = new System.Drawing.Point(3, 3);
             this.btn_Confirm.Name = "btn_Confirm";
-            this.btn_Confirm.Size = new System.Drawing.Size(200, 61);
+            this.btn_Confirm.Size = new System.Drawing.Size(201, 61);
             this.btn_Confirm.TabIndex = 6;
             this.btn_Confirm.Text = "Confirm";
             this.btn_Confirm.UseVisualStyleBackColor = true;
@@ -186,9 +186,9 @@
             // btn_Delete
             // 
             this.btn_Delete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Delete.Location = new System.Drawing.Point(209, 3);
+            this.btn_Delete.Location = new System.Drawing.Point(210, 3);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(200, 61);
+            this.btn_Delete.Size = new System.Drawing.Size(201, 61);
             this.btn_Delete.TabIndex = 8;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;

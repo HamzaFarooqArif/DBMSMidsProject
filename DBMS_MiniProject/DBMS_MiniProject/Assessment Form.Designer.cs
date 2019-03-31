@@ -48,9 +48,18 @@
             this.lbl_Heading = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Validation3 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Validation1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Validation2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Assessment)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_Title
@@ -86,27 +95,32 @@
             // txt_Title
             // 
             this.txt_Title.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_Title.Location = new System.Drawing.Point(102, 3);
+            this.txt_Title.Location = new System.Drawing.Point(3, 3);
+            this.txt_Title.MaxLength = 50;
             this.txt_Title.Name = "txt_Title";
-            this.txt_Title.Size = new System.Drawing.Size(545, 20);
+            this.txt_Title.Size = new System.Drawing.Size(489, 20);
             this.txt_Title.TabIndex = 3;
             this.txt_Title.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txt_TotalMarks
             // 
             this.txt_TotalMarks.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_TotalMarks.Location = new System.Drawing.Point(102, 36);
+            this.txt_TotalMarks.Location = new System.Drawing.Point(3, 3);
+            this.txt_TotalMarks.MaxLength = 3;
             this.txt_TotalMarks.Name = "txt_TotalMarks";
-            this.txt_TotalMarks.Size = new System.Drawing.Size(545, 20);
+            this.txt_TotalMarks.Size = new System.Drawing.Size(489, 20);
             this.txt_TotalMarks.TabIndex = 4;
+            this.txt_TotalMarks.TextChanged += new System.EventHandler(this.txt_TotalMarks_TextChanged);
             // 
             // txt_TotalWeightage
             // 
             this.txt_TotalWeightage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_TotalWeightage.Location = new System.Drawing.Point(102, 69);
+            this.txt_TotalWeightage.Location = new System.Drawing.Point(3, 3);
+            this.txt_TotalWeightage.MaxLength = 3;
             this.txt_TotalWeightage.Name = "txt_TotalWeightage";
-            this.txt_TotalWeightage.Size = new System.Drawing.Size(545, 20);
+            this.txt_TotalWeightage.Size = new System.Drawing.Size(489, 20);
             this.txt_TotalWeightage.TabIndex = 5;
+            this.txt_TotalWeightage.TextChanged += new System.EventHandler(this.txt_TotalWeightage_TextChanged);
             // 
             // dgv_Assessment
             // 
@@ -222,9 +236,9 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 99F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.txt_Title, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txt_TotalMarks, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txt_TotalWeightage, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbl_Title, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbl_TotalMarks, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lbl_TotalWeightage, 0, 2);
@@ -258,6 +272,84 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(650, 35);
             this.tableLayoutPanel2.TabIndex = 22;
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.lbl_Validation3, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txt_TotalWeightage, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(102, 69);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(545, 28);
+            this.tableLayoutPanel3.TabIndex = 23;
+            // 
+            // lbl_Validation3
+            // 
+            this.lbl_Validation3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Validation3.AutoSize = true;
+            this.lbl_Validation3.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Validation3.Location = new System.Drawing.Point(498, 7);
+            this.lbl_Validation3.Name = "lbl_Validation3";
+            this.lbl_Validation3.Size = new System.Drawing.Size(38, 13);
+            this.lbl_Validation3.TabIndex = 0;
+            this.lbl_Validation3.Text = "Invalid";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.txt_Title, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Validation1, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(102, 3);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(545, 27);
+            this.tableLayoutPanel4.TabIndex = 24;
+            // 
+            // lbl_Validation1
+            // 
+            this.lbl_Validation1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Validation1.AutoSize = true;
+            this.lbl_Validation1.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Validation1.Location = new System.Drawing.Point(498, 7);
+            this.lbl_Validation1.Name = "lbl_Validation1";
+            this.lbl_Validation1.Size = new System.Drawing.Size(38, 13);
+            this.lbl_Validation1.TabIndex = 0;
+            this.lbl_Validation1.Text = "Invalid";
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.lbl_Validation2, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.txt_TotalMarks, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(102, 36);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(545, 27);
+            this.tableLayoutPanel5.TabIndex = 24;
+            // 
+            // lbl_Validation2
+            // 
+            this.lbl_Validation2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Validation2.AutoSize = true;
+            this.lbl_Validation2.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Validation2.Location = new System.Drawing.Point(498, 7);
+            this.lbl_Validation2.Name = "lbl_Validation2";
+            this.lbl_Validation2.Size = new System.Drawing.Size(38, 13);
+            this.lbl_Validation2.TabIndex = 0;
+            this.lbl_Validation2.Text = "Invalid";
+            // 
             // Assessment_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,6 +367,12 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,5 +400,11 @@
         private System.Windows.Forms.Label lbl_Heading;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label lbl_Validation3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Label lbl_Validation2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label lbl_Validation1;
     }
 }

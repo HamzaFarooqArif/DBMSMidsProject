@@ -60,44 +60,65 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Heading = new System.Windows.Forms.Label();
+            this.lbl_Validation1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Validation2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Validation5 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Validation3 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Validation4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Student)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_FirstName
             // 
-            this.txt_FirstName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txt_FirstName.Location = new System.Drawing.Point(118, 3);
+            this.txt_FirstName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_FirstName.Location = new System.Drawing.Point(3, 3);
+            this.txt_FirstName.MaxLength = 50;
             this.txt_FirstName.Name = "txt_FirstName";
-            this.txt_FirstName.Size = new System.Drawing.Size(610, 20);
+            this.txt_FirstName.Size = new System.Drawing.Size(554, 20);
             this.txt_FirstName.TabIndex = 0;
+            this.txt_FirstName.TextChanged += new System.EventHandler(this.txt_FirstName_TextChanged);
             // 
             // txt_LastName
             // 
-            this.txt_LastName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txt_LastName.Location = new System.Drawing.Point(118, 28);
+            this.txt_LastName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_LastName.Location = new System.Drawing.Point(3, 3);
+            this.txt_LastName.MaxLength = 50;
             this.txt_LastName.Name = "txt_LastName";
-            this.txt_LastName.Size = new System.Drawing.Size(610, 20);
-            this.txt_LastName.TabIndex = 1;
+            this.txt_LastName.Size = new System.Drawing.Size(554, 20);
+            this.txt_LastName.TabIndex = 0;
+            this.txt_LastName.TextChanged += new System.EventHandler(this.txt_LastName_TextChanged);
             // 
             // txt_Contact
             // 
-            this.txt_Contact.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txt_Contact.Location = new System.Drawing.Point(118, 53);
+            this.txt_Contact.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_Contact.Location = new System.Drawing.Point(3, 3);
             this.txt_Contact.Name = "txt_Contact";
-            this.txt_Contact.Size = new System.Drawing.Size(610, 20);
-            this.txt_Contact.TabIndex = 2;
+            this.txt_Contact.Size = new System.Drawing.Size(554, 20);
+            this.txt_Contact.TabIndex = 0;
+            this.txt_Contact.TextChanged += new System.EventHandler(this.txt_Contact_TextChanged);
             // 
             // txt_Email
             // 
-            this.txt_Email.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txt_Email.Location = new System.Drawing.Point(118, 78);
+            this.txt_Email.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_Email.Location = new System.Drawing.Point(3, 3);
             this.txt_Email.Name = "txt_Email";
-            this.txt_Email.Size = new System.Drawing.Size(610, 20);
-            this.txt_Email.TabIndex = 3;
+            this.txt_Email.Size = new System.Drawing.Size(554, 20);
+            this.txt_Email.TabIndex = 0;
+            this.txt_Email.TextChanged += new System.EventHandler(this.txt_Email_TextChanged);
             // 
             // lbl_FirstName
             // 
@@ -106,7 +127,7 @@
             this.lbl_FirstName.Location = new System.Drawing.Point(3, 6);
             this.lbl_FirstName.Name = "lbl_FirstName";
             this.lbl_FirstName.Size = new System.Drawing.Size(57, 13);
-            this.lbl_FirstName.TabIndex = 4;
+            this.lbl_FirstName.TabIndex = 1;
             this.lbl_FirstName.Text = "First Name";
             // 
             // lbl_LastName
@@ -142,11 +163,12 @@
             // 
             // txt_RegistrationNumber
             // 
-            this.txt_RegistrationNumber.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txt_RegistrationNumber.Location = new System.Drawing.Point(118, 103);
+            this.txt_RegistrationNumber.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_RegistrationNumber.Location = new System.Drawing.Point(3, 3);
             this.txt_RegistrationNumber.Name = "txt_RegistrationNumber";
-            this.txt_RegistrationNumber.Size = new System.Drawing.Size(610, 20);
-            this.txt_RegistrationNumber.TabIndex = 8;
+            this.txt_RegistrationNumber.Size = new System.Drawing.Size(554, 20);
+            this.txt_RegistrationNumber.TabIndex = 0;
+            this.txt_RegistrationNumber.TextChanged += new System.EventHandler(this.txt_RegistrationNumber_TextChanged);
             // 
             // lbl_RegistrationNumber
             // 
@@ -176,7 +198,7 @@
             this.cb_status.Location = new System.Drawing.Point(118, 128);
             this.cb_status.Name = "cb_status";
             this.cb_status.Size = new System.Drawing.Size(610, 21);
-            this.cb_status.TabIndex = 11;
+            this.cb_status.TabIndex = 5;
             // 
             // btn_Add
             // 
@@ -184,7 +206,7 @@
             this.btn_Add.Location = new System.Drawing.Point(3, 3);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(176, 23);
-            this.btn_Add.TabIndex = 12;
+            this.btn_Add.TabIndex = 0;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
@@ -281,7 +303,7 @@
             this.btn_Update.Location = new System.Drawing.Point(185, 3);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(176, 23);
-            this.btn_Update.TabIndex = 14;
+            this.btn_Update.TabIndex = 1;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = true;
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
@@ -292,7 +314,7 @@
             this.btn_Delete.Location = new System.Drawing.Point(367, 3);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(176, 24);
-            this.btn_Delete.TabIndex = 15;
+            this.btn_Delete.TabIndex = 2;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
@@ -303,7 +325,7 @@
             this.btn_Exit.Location = new System.Drawing.Point(549, 3);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(179, 24);
-            this.btn_Exit.TabIndex = 16;
+            this.btn_Exit.TabIndex = 3;
             this.btn_Exit.Text = "Exit to Home";
             this.btn_Exit.UseVisualStyleBackColor = true;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
@@ -315,18 +337,18 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.lbl_FirstName, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbl_LastName, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lbl_Contact, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.lbl_Email, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.lbl_RegistrationNumber, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.lbl_Status, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.cb_status, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.txt_FirstName, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txt_RegistrationNumber, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txt_LastName, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txt_Email, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txt_Contact, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 37);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
@@ -370,6 +392,138 @@
             this.lbl_Heading.TabIndex = 19;
             this.lbl_Heading.Text = "Manage Student";
             // 
+            // lbl_Validation1
+            // 
+            this.lbl_Validation1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Validation1.AutoSize = true;
+            this.lbl_Validation1.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Validation1.Location = new System.Drawing.Point(563, 3);
+            this.lbl_Validation1.Name = "lbl_Validation1";
+            this.lbl_Validation1.Size = new System.Drawing.Size(38, 13);
+            this.lbl_Validation1.TabIndex = 0;
+            this.lbl_Validation1.Text = "Invalid";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.lbl_Validation1, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txt_FirstName, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(118, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(610, 19);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Validation2, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txt_LastName, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(118, 28);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(610, 19);
+            this.tableLayoutPanel4.TabIndex = 1;
+            // 
+            // lbl_Validation2
+            // 
+            this.lbl_Validation2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Validation2.AutoSize = true;
+            this.lbl_Validation2.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Validation2.Location = new System.Drawing.Point(563, 3);
+            this.lbl_Validation2.Name = "lbl_Validation2";
+            this.lbl_Validation2.Size = new System.Drawing.Size(38, 13);
+            this.lbl_Validation2.TabIndex = 0;
+            this.lbl_Validation2.Text = "Invalid";
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.lbl_Validation5, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.txt_RegistrationNumber, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(118, 103);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(610, 19);
+            this.tableLayoutPanel5.TabIndex = 4;
+            this.tableLayoutPanel5.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel5_Paint);
+            // 
+            // lbl_Validation5
+            // 
+            this.lbl_Validation5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Validation5.AutoSize = true;
+            this.lbl_Validation5.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Validation5.Location = new System.Drawing.Point(563, 3);
+            this.lbl_Validation5.Name = "lbl_Validation5";
+            this.lbl_Validation5.Size = new System.Drawing.Size(38, 13);
+            this.lbl_Validation5.TabIndex = 0;
+            this.lbl_Validation5.Text = "Invalid";
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.lbl_Validation3, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.txt_Contact, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(118, 53);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(610, 19);
+            this.tableLayoutPanel6.TabIndex = 2;
+            // 
+            // lbl_Validation3
+            // 
+            this.lbl_Validation3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Validation3.AutoSize = true;
+            this.lbl_Validation3.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Validation3.Location = new System.Drawing.Point(563, 3);
+            this.lbl_Validation3.Name = "lbl_Validation3";
+            this.lbl_Validation3.Size = new System.Drawing.Size(38, 13);
+            this.lbl_Validation3.TabIndex = 0;
+            this.lbl_Validation3.Text = "Invalid";
+            this.lbl_Validation3.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel7.Controls.Add(this.lbl_Validation4, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.txt_Email, 0, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(118, 78);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(610, 19);
+            this.tableLayoutPanel7.TabIndex = 3;
+            // 
+            // lbl_Validation4
+            // 
+            this.lbl_Validation4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Validation4.AutoSize = true;
+            this.lbl_Validation4.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Validation4.Location = new System.Drawing.Point(563, 3);
+            this.lbl_Validation4.Name = "lbl_Validation4";
+            this.lbl_Validation4.Size = new System.Drawing.Size(38, 13);
+            this.lbl_Validation4.TabIndex = 0;
+            this.lbl_Validation4.Text = "Invalid";
+            // 
             // Student_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,12 +537,24 @@
             this.Name = "Student_Form";
             this.Text = "Student_Form";
             this.Load += new System.EventHandler(this.Student_Form_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Student_Form_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Student_Form_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Student)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,5 +593,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewButtonColumn Column7;
         private System.Windows.Forms.Label lbl_Heading;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label lbl_Validation1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label lbl_Validation2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Label lbl_Validation5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Label lbl_Validation4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Label lbl_Validation3;
     }
 }

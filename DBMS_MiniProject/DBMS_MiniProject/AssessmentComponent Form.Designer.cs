@@ -54,9 +54,15 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Heading = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Validation2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Validation1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_AssessmentComponent)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_Name
@@ -102,18 +108,22 @@
             // txt_Name
             // 
             this.txt_Name.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_Name.Location = new System.Drawing.Point(81, 3);
+            this.txt_Name.Location = new System.Drawing.Point(3, 3);
+            this.txt_Name.MaxLength = 50;
             this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(771, 20);
+            this.txt_Name.Size = new System.Drawing.Size(715, 20);
             this.txt_Name.TabIndex = 4;
+            this.txt_Name.TextChanged += new System.EventHandler(this.txt_Name_TextChanged);
             // 
             // txt_TotalMarks
             // 
             this.txt_TotalMarks.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_TotalMarks.Location = new System.Drawing.Point(81, 30);
+            this.txt_TotalMarks.Location = new System.Drawing.Point(3, 3);
+            this.txt_TotalMarks.MaxLength = 3;
             this.txt_TotalMarks.Name = "txt_TotalMarks";
-            this.txt_TotalMarks.Size = new System.Drawing.Size(771, 20);
+            this.txt_TotalMarks.Size = new System.Drawing.Size(715, 20);
             this.txt_TotalMarks.TabIndex = 5;
+            this.txt_TotalMarks.TextChanged += new System.EventHandler(this.txt_TotalMarks_TextChanged);
             // 
             // cb_Rubric
             // 
@@ -214,6 +224,7 @@
             this.txt_RubricDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_RubricDetails.Location = new System.Drawing.Point(81, 84);
             this.txt_RubricDetails.Name = "txt_RubricDetails";
+            this.txt_RubricDetails.ReadOnly = true;
             this.txt_RubricDetails.Size = new System.Drawing.Size(771, 20);
             this.txt_RubricDetails.TabIndex = 10;
             // 
@@ -268,6 +279,8 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbl_Name, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbl_TotalMarks, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lbl_Rubric, 0, 2);
@@ -276,8 +289,6 @@
             this.tableLayoutPanel1.Controls.Add(this.lbl_Assessment, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.cb_Rubric, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.cb_Assessment, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txt_Name, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txt_TotalMarks, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 46);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -306,7 +317,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(855, 30);
             this.tableLayoutPanel2.TabIndex = 16;
             // 
@@ -320,6 +331,58 @@
             this.lbl_Heading.Size = new System.Drawing.Size(304, 25);
             this.lbl_Heading.TabIndex = 21;
             this.lbl_Heading.Text = "Manage Assessment Component";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.lbl_Validation2, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txt_TotalMarks, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(81, 30);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(771, 21);
+            this.tableLayoutPanel3.TabIndex = 22;
+            // 
+            // lbl_Validation2
+            // 
+            this.lbl_Validation2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Validation2.AutoSize = true;
+            this.lbl_Validation2.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Validation2.Location = new System.Drawing.Point(724, 4);
+            this.lbl_Validation2.Name = "lbl_Validation2";
+            this.lbl_Validation2.Size = new System.Drawing.Size(38, 13);
+            this.lbl_Validation2.TabIndex = 0;
+            this.lbl_Validation2.Text = "Invalid";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Validation1, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txt_Name, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(81, 3);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(771, 21);
+            this.tableLayoutPanel4.TabIndex = 23;
+            // 
+            // lbl_Validation1
+            // 
+            this.lbl_Validation1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Validation1.AutoSize = true;
+            this.lbl_Validation1.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Validation1.Location = new System.Drawing.Point(724, 4);
+            this.lbl_Validation1.Name = "lbl_Validation1";
+            this.lbl_Validation1.Size = new System.Drawing.Size(38, 13);
+            this.lbl_Validation1.TabIndex = 0;
+            this.lbl_Validation1.Text = "Invalid";
             // 
             // AssessmentComponent_Form
             // 
@@ -337,6 +400,10 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,5 +437,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label lbl_Heading;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label lbl_Validation2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label lbl_Validation1;
     }
 }
