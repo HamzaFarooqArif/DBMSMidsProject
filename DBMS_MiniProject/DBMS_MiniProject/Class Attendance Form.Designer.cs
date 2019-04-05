@@ -51,17 +51,17 @@
             // 
             this.dtp_ClassAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtp_ClassAttendance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_ClassAttendance.Location = new System.Drawing.Point(41, 3);
+            this.dtp_ClassAttendance.Location = new System.Drawing.Point(45, 5);
             this.dtp_ClassAttendance.Name = "dtp_ClassAttendance";
-            this.dtp_ClassAttendance.Size = new System.Drawing.Size(218, 20);
+            this.dtp_ClassAttendance.Size = new System.Drawing.Size(212, 20);
             this.dtp_ClassAttendance.TabIndex = 0;
             // 
             // btn_Confirm
             // 
             this.btn_Confirm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Confirm.Location = new System.Drawing.Point(3, 3);
+            this.btn_Confirm.Location = new System.Drawing.Point(5, 5);
             this.btn_Confirm.Name = "btn_Confirm";
-            this.btn_Confirm.Size = new System.Drawing.Size(59, 24);
+            this.btn_Confirm.Size = new System.Drawing.Size(57, 20);
             this.btn_Confirm.TabIndex = 0;
             this.btn_Confirm.Text = "Add";
             this.btn_Confirm.UseVisualStyleBackColor = true;
@@ -70,9 +70,9 @@
             // btn_Delete
             // 
             this.btn_Delete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Delete.Location = new System.Drawing.Point(133, 3);
+            this.btn_Delete.Location = new System.Drawing.Point(135, 5);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(59, 24);
+            this.btn_Delete.Size = new System.Drawing.Size(57, 20);
             this.btn_Delete.TabIndex = 2;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
@@ -115,9 +115,9 @@
             // btn_Exit
             // 
             this.btn_Exit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Exit.Location = new System.Drawing.Point(198, 3);
+            this.btn_Exit.Location = new System.Drawing.Point(200, 5);
             this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(61, 24);
+            this.btn_Exit.Size = new System.Drawing.Size(57, 20);
             this.btn_Exit.TabIndex = 3;
             this.btn_Exit.Text = "Exit To Home";
             this.btn_Exit.UseVisualStyleBackColor = true;
@@ -126,9 +126,9 @@
             // btn_Update
             // 
             this.btn_Update.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Update.Location = new System.Drawing.Point(68, 3);
+            this.btn_Update.Location = new System.Drawing.Point(70, 5);
             this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(59, 24);
+            this.btn_Update.Size = new System.Drawing.Size(57, 20);
             this.btn_Update.TabIndex = 1;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = true;
@@ -138,7 +138,7 @@
             // 
             this.lbl_Date.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Date.AutoSize = true;
-            this.lbl_Date.Location = new System.Drawing.Point(3, 7);
+            this.lbl_Date.Location = new System.Drawing.Point(5, 7);
             this.lbl_Date.Name = "lbl_Date";
             this.lbl_Date.Size = new System.Drawing.Size(30, 13);
             this.lbl_Date.TabIndex = 8;
@@ -148,6 +148,7 @@
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -175,6 +176,7 @@
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -194,6 +196,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 37);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(105, 296);
@@ -209,7 +212,7 @@
             this.Controls.Add(this.lbl_Heading);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.dgv_ClassAttendance);
-            this.MinimumSize = new System.Drawing.Size(385, 300);
+            this.MinimumSize = new System.Drawing.Size(409, 385);
             this.Name = "Class_Attendance_Form";
             this.Text = "Class_Attendance_Form";
             this.Load += new System.EventHandler(this.Class_Attendance_Form_Load);

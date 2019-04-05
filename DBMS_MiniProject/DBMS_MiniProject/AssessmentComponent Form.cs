@@ -29,6 +29,7 @@ namespace DBMS_MiniProject
             assessmentComponent_Form.cb_Assessment.Items.Clear();
 
             List<Rubric> rubricList = Rubric.retrieveRubrics();
+            assessmentComponent_Form.cb_Rubric.Items.Clear();
             foreach (Rubric rb in rubricList)
             {
                 assessmentComponent_Form.cb_Rubric.Items.Add(rb.Id);

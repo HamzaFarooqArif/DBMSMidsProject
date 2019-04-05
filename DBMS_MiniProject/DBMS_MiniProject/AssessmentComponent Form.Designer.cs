@@ -70,7 +70,7 @@
             // 
             this.lbl_Name.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Name.AutoSize = true;
-            this.lbl_Name.Location = new System.Drawing.Point(3, 7);
+            this.lbl_Name.Location = new System.Drawing.Point(5, 7);
             this.lbl_Name.Name = "lbl_Name";
             this.lbl_Name.Size = new System.Drawing.Size(35, 13);
             this.lbl_Name.TabIndex = 0;
@@ -80,7 +80,7 @@
             // 
             this.lbl_TotalMarks.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_TotalMarks.AutoSize = true;
-            this.lbl_TotalMarks.Location = new System.Drawing.Point(3, 34);
+            this.lbl_TotalMarks.Location = new System.Drawing.Point(5, 33);
             this.lbl_TotalMarks.Name = "lbl_TotalMarks";
             this.lbl_TotalMarks.Size = new System.Drawing.Size(63, 13);
             this.lbl_TotalMarks.TabIndex = 1;
@@ -90,7 +90,7 @@
             // 
             this.lbl_Rubric.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Rubric.AutoSize = true;
-            this.lbl_Rubric.Location = new System.Drawing.Point(3, 61);
+            this.lbl_Rubric.Location = new System.Drawing.Point(5, 59);
             this.lbl_Rubric.Name = "lbl_Rubric";
             this.lbl_Rubric.Size = new System.Drawing.Size(47, 13);
             this.lbl_Rubric.TabIndex = 2;
@@ -100,7 +100,7 @@
             // 
             this.lbl_Assessment.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Assessment.AutoSize = true;
-            this.lbl_Assessment.Location = new System.Drawing.Point(3, 115);
+            this.lbl_Assessment.Location = new System.Drawing.Point(5, 113);
             this.lbl_Assessment.Name = "lbl_Assessment";
             this.lbl_Assessment.Size = new System.Drawing.Size(63, 13);
             this.lbl_Assessment.TabIndex = 3;
@@ -112,7 +112,7 @@
             this.txt_Name.Location = new System.Drawing.Point(3, 3);
             this.txt_Name.MaxLength = 50;
             this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(604, 20);
+            this.txt_Name.Size = new System.Drawing.Size(598, 20);
             this.txt_Name.TabIndex = 4;
             this.txt_Name.TextChanged += new System.EventHandler(this.txt_Name_TextChanged);
             // 
@@ -122,7 +122,7 @@
             this.txt_TotalMarks.Location = new System.Drawing.Point(3, 3);
             this.txt_TotalMarks.MaxLength = 3;
             this.txt_TotalMarks.Name = "txt_TotalMarks";
-            this.txt_TotalMarks.Size = new System.Drawing.Size(604, 20);
+            this.txt_TotalMarks.Size = new System.Drawing.Size(598, 20);
             this.txt_TotalMarks.TabIndex = 5;
             this.txt_TotalMarks.TextChanged += new System.EventHandler(this.txt_TotalMarks_TextChanged);
             // 
@@ -131,9 +131,9 @@
             this.cb_Rubric.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cb_Rubric.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Rubric.FormattingEnabled = true;
-            this.cb_Rubric.Location = new System.Drawing.Point(81, 57);
+            this.cb_Rubric.Location = new System.Drawing.Point(85, 57);
             this.cb_Rubric.Name = "cb_Rubric";
-            this.cb_Rubric.Size = new System.Drawing.Size(660, 21);
+            this.cb_Rubric.Size = new System.Drawing.Size(654, 21);
             this.cb_Rubric.TabIndex = 2;
             this.cb_Rubric.SelectedIndexChanged += new System.EventHandler(this.cb_Rubric_SelectedIndexChanged);
             // 
@@ -142,9 +142,9 @@
             this.cb_Assessment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cb_Assessment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Assessment.FormattingEnabled = true;
-            this.cb_Assessment.Location = new System.Drawing.Point(81, 111);
+            this.cb_Assessment.Location = new System.Drawing.Point(85, 109);
             this.cb_Assessment.Name = "cb_Assessment";
-            this.cb_Assessment.Size = new System.Drawing.Size(660, 21);
+            this.cb_Assessment.Size = new System.Drawing.Size(654, 21);
             this.cb_Assessment.TabIndex = 4;
             // 
             // dgv_AssessmentComponent
@@ -215,7 +215,7 @@
             // 
             this.lbl_RubricDetails.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_RubricDetails.AutoSize = true;
-            this.lbl_RubricDetails.Location = new System.Drawing.Point(3, 88);
+            this.lbl_RubricDetails.Location = new System.Drawing.Point(5, 85);
             this.lbl_RubricDetails.Name = "lbl_RubricDetails";
             this.lbl_RubricDetails.Size = new System.Drawing.Size(39, 13);
             this.lbl_RubricDetails.TabIndex = 9;
@@ -225,18 +225,18 @@
             // txt_RubricDetails
             // 
             this.txt_RubricDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_RubricDetails.Location = new System.Drawing.Point(81, 84);
+            this.txt_RubricDetails.Location = new System.Drawing.Point(85, 83);
             this.txt_RubricDetails.Name = "txt_RubricDetails";
             this.txt_RubricDetails.ReadOnly = true;
-            this.txt_RubricDetails.Size = new System.Drawing.Size(660, 20);
+            this.txt_RubricDetails.Size = new System.Drawing.Size(654, 20);
             this.txt_RubricDetails.TabIndex = 3;
             // 
             // btn_Add
             // 
             this.btn_Add.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Add.Location = new System.Drawing.Point(3, 3);
+            this.btn_Add.Location = new System.Drawing.Point(5, 5);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(180, 24);
+            this.btn_Add.Size = new System.Drawing.Size(177, 20);
             this.btn_Add.TabIndex = 0;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
@@ -245,9 +245,9 @@
             // btn_Update
             // 
             this.btn_Update.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Update.Location = new System.Drawing.Point(189, 3);
+            this.btn_Update.Location = new System.Drawing.Point(190, 5);
             this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(180, 24);
+            this.btn_Update.Size = new System.Drawing.Size(177, 20);
             this.btn_Update.TabIndex = 1;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = true;
@@ -256,9 +256,9 @@
             // btn_Delete
             // 
             this.btn_Delete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Delete.Location = new System.Drawing.Point(375, 3);
+            this.btn_Delete.Location = new System.Drawing.Point(375, 5);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(180, 24);
+            this.btn_Delete.Size = new System.Drawing.Size(177, 20);
             this.btn_Delete.TabIndex = 2;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
@@ -267,9 +267,9 @@
             // btn_Exit
             // 
             this.btn_Exit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Exit.Location = new System.Drawing.Point(561, 3);
+            this.btn_Exit.Location = new System.Drawing.Point(560, 5);
             this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(180, 24);
+            this.btn_Exit.Size = new System.Drawing.Size(179, 20);
             this.btn_Exit.TabIndex = 3;
             this.btn_Exit.Text = "Exit To Home";
             this.btn_Exit.UseVisualStyleBackColor = true;
@@ -279,6 +279,7 @@
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -311,11 +312,11 @@
             this.tableLayoutPanel3.Controls.Add(this.lbl_Validation2, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.txt_TotalMarks, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(81, 30);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(85, 31);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(660, 21);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(654, 18);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // lbl_Validation2
@@ -323,7 +324,7 @@
             this.lbl_Validation2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Validation2.AutoSize = true;
             this.lbl_Validation2.ForeColor = System.Drawing.Color.Red;
-            this.lbl_Validation2.Location = new System.Drawing.Point(613, 4);
+            this.lbl_Validation2.Location = new System.Drawing.Point(607, 2);
             this.lbl_Validation2.Name = "lbl_Validation2";
             this.lbl_Validation2.Size = new System.Drawing.Size(38, 13);
             this.lbl_Validation2.TabIndex = 0;
@@ -337,11 +338,11 @@
             this.tableLayoutPanel4.Controls.Add(this.lbl_Validation1, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.txt_Name, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(81, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(85, 5);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(660, 21);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(654, 18);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // lbl_Validation1
@@ -349,7 +350,7 @@
             this.lbl_Validation1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Validation1.AutoSize = true;
             this.lbl_Validation1.ForeColor = System.Drawing.Color.Red;
-            this.lbl_Validation1.Location = new System.Drawing.Point(613, 4);
+            this.lbl_Validation1.Location = new System.Drawing.Point(607, 2);
             this.lbl_Validation1.Name = "lbl_Validation1";
             this.lbl_Validation1.Size = new System.Drawing.Size(38, 13);
             this.lbl_Validation1.TabIndex = 0;
@@ -359,6 +360,7 @@
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -389,6 +391,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 46);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(105, 296);

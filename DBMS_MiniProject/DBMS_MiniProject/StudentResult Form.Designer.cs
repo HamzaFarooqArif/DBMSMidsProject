@@ -49,7 +49,6 @@
             this.lbl_Heading = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_StudentResult)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -62,7 +61,7 @@
             // 
             this.lbl_Assessment.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Assessment.AutoSize = true;
-            this.lbl_Assessment.Location = new System.Drawing.Point(3, 10);
+            this.lbl_Assessment.Location = new System.Drawing.Point(3, 9);
             this.lbl_Assessment.Name = "lbl_Assessment";
             this.lbl_Assessment.Size = new System.Drawing.Size(63, 13);
             this.lbl_Assessment.TabIndex = 0;
@@ -72,7 +71,7 @@
             // 
             this.lbl_Student.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Student.AutoSize = true;
-            this.lbl_Student.Location = new System.Drawing.Point(3, 43);
+            this.lbl_Student.Location = new System.Drawing.Point(3, 40);
             this.lbl_Student.Name = "lbl_Student";
             this.lbl_Student.Size = new System.Drawing.Size(44, 13);
             this.lbl_Student.TabIndex = 1;
@@ -85,7 +84,7 @@
             this.cb_Assessment.FormattingEnabled = true;
             this.cb_Assessment.Location = new System.Drawing.Point(80, 3);
             this.cb_Assessment.Name = "cb_Assessment";
-            this.cb_Assessment.Size = new System.Drawing.Size(483, 21);
+            this.cb_Assessment.Size = new System.Drawing.Size(480, 21);
             this.cb_Assessment.TabIndex = 0;
             this.cb_Assessment.SelectedIndexChanged += new System.EventHandler(this.cb_Assessment_SelectedIndexChanged);
             // 
@@ -94,29 +93,30 @@
             this.cb_Student.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cb_Student.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Student.FormattingEnabled = true;
-            this.cb_Student.Location = new System.Drawing.Point(80, 36);
+            this.cb_Student.Location = new System.Drawing.Point(80, 34);
             this.cb_Student.Name = "cb_Student";
-            this.cb_Student.Size = new System.Drawing.Size(483, 21);
+            this.cb_Student.Size = new System.Drawing.Size(480, 21);
             this.cb_Student.TabIndex = 1;
             this.cb_Student.SelectedIndexChanged += new System.EventHandler(this.cb_Student_SelectedIndexChanged);
             // 
             // flp_Student
             // 
             this.flp_Student.AutoScroll = true;
+            this.flp_Student.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flp_Student.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flp_Student.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flp_Student.Location = new System.Drawing.Point(3, 3);
+            this.flp_Student.Location = new System.Drawing.Point(5, 5);
             this.flp_Student.Name = "flp_Student";
-            this.flp_Student.Size = new System.Drawing.Size(518, 224);
+            this.flp_Student.Size = new System.Drawing.Size(518, 220);
             this.flp_Student.TabIndex = 0;
             this.flp_Student.WrapContents = false;
             // 
             // btn_Exit
             // 
             this.btn_Exit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Exit.Location = new System.Drawing.Point(381, 3);
+            this.btn_Exit.Location = new System.Drawing.Point(379, 5);
             this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(183, 61);
+            this.btn_Exit.Size = new System.Drawing.Size(180, 53);
             this.btn_Exit.TabIndex = 5;
             this.btn_Exit.Text = "Exit To Home";
             this.btn_Exit.UseVisualStyleBackColor = true;
@@ -125,9 +125,9 @@
             // btn_Confirm
             // 
             this.btn_Confirm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Confirm.Location = new System.Drawing.Point(3, 3);
+            this.btn_Confirm.Location = new System.Drawing.Point(5, 5);
             this.btn_Confirm.Name = "btn_Confirm";
-            this.btn_Confirm.Size = new System.Drawing.Size(183, 61);
+            this.btn_Confirm.Size = new System.Drawing.Size(179, 53);
             this.btn_Confirm.TabIndex = 0;
             this.btn_Confirm.Text = "Confirm";
             this.btn_Confirm.UseVisualStyleBackColor = true;
@@ -146,9 +146,9 @@
             this.Column4,
             this.Column5});
             this.dgv_StudentResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_StudentResult.Location = new System.Drawing.Point(527, 3);
+            this.dgv_StudentResult.Location = new System.Drawing.Point(531, 5);
             this.dgv_StudentResult.Name = "dgv_StudentResult";
-            this.dgv_StudentResult.Size = new System.Drawing.Size(615, 224);
+            this.dgv_StudentResult.Size = new System.Drawing.Size(609, 220);
             this.dgv_StudentResult.TabIndex = 1;
             this.dgv_StudentResult.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_StudentResult_CellContentClick);
             // 
@@ -194,9 +194,9 @@
             // btn_Delete
             // 
             this.btn_Delete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Delete.Location = new System.Drawing.Point(192, 3);
+            this.btn_Delete.Location = new System.Drawing.Point(192, 5);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(183, 61);
+            this.btn_Delete.Size = new System.Drawing.Size(179, 53);
             this.btn_Delete.TabIndex = 1;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
@@ -212,16 +212,17 @@
             this.tableLayoutPanel1.Controls.Add(this.cb_Student, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lbl_Student, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(5, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(566, 67);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(563, 63);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -230,11 +231,11 @@
             this.tableLayoutPanel2.Controls.Add(this.btn_Delete, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_Exit, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(575, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(576, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(567, 67);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(564, 63);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // lbl_Heading
@@ -253,6 +254,7 @@
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 524F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -269,6 +271,7 @@
             // 
             this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel4.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -282,18 +285,9 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1145, 73);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(763, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 37);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(105, 296);
@@ -305,11 +299,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 358);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.lbl_Heading);
-            this.MinimumSize = new System.Drawing.Size(1296, 353);
+            this.MinimumSize = new System.Drawing.Size(1296, 397);
             this.Name = "StudentResult_Form";
             this.Text = "StudentResult_Form";
             this.Load += new System.EventHandler(this.StudentResult_Form_Load);
@@ -347,7 +340,6 @@
         private System.Windows.Forms.Label lbl_Heading;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
