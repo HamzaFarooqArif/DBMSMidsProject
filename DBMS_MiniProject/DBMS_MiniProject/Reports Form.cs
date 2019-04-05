@@ -22,6 +22,8 @@ namespace DBMS_MiniProject
                 reports_Form = new Reports_Form();
             }
             reports_Form.ClearControls(reports_Form);
+            Navbar nav = new Navbar("Reports_Form");
+            reports_Form.flowLayoutPanel1.Controls.Add(nav);
             setCurrentAttributes(reports_Form);
             return reports_Form;
         }

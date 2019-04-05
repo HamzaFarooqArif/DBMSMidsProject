@@ -45,6 +45,7 @@
             this.lbl_Validation1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Heading = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Clo)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -57,7 +58,7 @@
             this.txt_Name.Location = new System.Drawing.Point(3, 3);
             this.txt_Name.MaxLength = 150;
             this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(312, 20);
+            this.txt_Name.Size = new System.Drawing.Size(201, 20);
             this.txt_Name.TabIndex = 0;
             this.txt_Name.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -84,9 +85,9 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgv_Clo.Location = new System.Drawing.Point(15, 105);
+            this.dgv_Clo.Location = new System.Drawing.Point(123, 105);
             this.dgv_Clo.Name = "dgv_Clo";
-            this.dgv_Clo.Size = new System.Drawing.Size(425, 243);
+            this.dgv_Clo.Size = new System.Drawing.Size(317, 243);
             this.dgv_Clo.TabIndex = 2;
             this.dgv_Clo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Clo_CellContentClick);
             // 
@@ -122,7 +123,7 @@
             this.btn_Add.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Add.Location = new System.Drawing.Point(3, 3);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(100, 22);
+            this.btn_Add.Size = new System.Drawing.Size(72, 22);
             this.btn_Add.TabIndex = 0;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
@@ -131,9 +132,9 @@
             // btn_Update
             // 
             this.btn_Update.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Update.Location = new System.Drawing.Point(109, 3);
+            this.btn_Update.Location = new System.Drawing.Point(81, 3);
             this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(100, 22);
+            this.btn_Update.Size = new System.Drawing.Size(72, 22);
             this.btn_Update.TabIndex = 1;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = true;
@@ -142,9 +143,9 @@
             // btn_Delete
             // 
             this.btn_Delete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Delete.Location = new System.Drawing.Point(215, 3);
+            this.btn_Delete.Location = new System.Drawing.Point(159, 3);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(100, 22);
+            this.btn_Delete.Size = new System.Drawing.Size(72, 22);
             this.btn_Delete.TabIndex = 2;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
@@ -153,9 +154,9 @@
             // btn_Exit
             // 
             this.btn_Exit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Exit.Location = new System.Drawing.Point(321, 3);
+            this.btn_Exit.Location = new System.Drawing.Point(237, 3);
             this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(101, 22);
+            this.btn_Exit.Size = new System.Drawing.Size(74, 22);
             this.btn_Exit.TabIndex = 3;
             this.btn_Exit.Text = "Exit To Home";
             this.btn_Exit.UseVisualStyleBackColor = true;
@@ -170,11 +171,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbl_Name, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 37);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(123, 37);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(425, 28);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(314, 28);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -189,7 +190,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(368, 22);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(257, 22);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // lbl_Validation1
@@ -197,7 +198,7 @@
             this.lbl_Validation1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Validation1.AutoSize = true;
             this.lbl_Validation1.ForeColor = System.Drawing.Color.Red;
-            this.lbl_Validation1.Location = new System.Drawing.Point(321, 4);
+            this.lbl_Validation1.Location = new System.Drawing.Point(210, 4);
             this.lbl_Validation1.Name = "lbl_Validation1";
             this.lbl_Validation1.Size = new System.Drawing.Size(38, 13);
             this.lbl_Validation1.TabIndex = 0;
@@ -216,11 +217,11 @@
             this.tableLayoutPanel2.Controls.Add(this.btn_Exit, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_Add, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_Update, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 71);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(123, 71);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(425, 28);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(314, 28);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // lbl_Heading
@@ -234,11 +235,19 @@
             this.lbl_Heading.TabIndex = 20;
             this.lbl_Heading.Text = "Manage CLO";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 37);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(105, 296);
+            this.flowLayoutPanel1.TabIndex = 23;
+            // 
             // CLO_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(449, 360);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.lbl_Heading);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -277,5 +286,6 @@
         private System.Windows.Forms.Label lbl_Heading;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label lbl_Validation1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

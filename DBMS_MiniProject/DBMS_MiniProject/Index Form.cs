@@ -21,6 +21,8 @@ namespace DBMS_MiniProject
                 index_Form = new Form1();
             }
             ClearControls(index_Form);
+            Navbar nav = new Navbar("Index_Form");
+            index_Form.flowLayoutPanel1.Controls.Add(nav);
             return index_Form;
         }
         private static void ClearControls(Control control)

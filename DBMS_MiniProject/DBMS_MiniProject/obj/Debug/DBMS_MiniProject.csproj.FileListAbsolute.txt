@@ -31,3 +31,4 @@ C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\obj\Debug
 C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\bin\Debug\itextsharp.dll
 C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\bin\Debug\itextsharp.xml
 C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.Reports_Form.resources
+C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.Navbar.resources

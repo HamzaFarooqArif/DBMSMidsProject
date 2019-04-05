@@ -23,6 +23,8 @@ namespace DBMS_MiniProject
             }
             //-------------------------------------------------------------------------------
             rubricLevel_Form.ClearControls(rubricLevel_Form);
+            Navbar nav = new Navbar("RubricLevel_Form");
+            rubricLevel_Form.flowLayoutPanel1.Controls.Add(nav);
             rubricLevel_Form.updateDGVRubricLevel();
             rubricLevel_Form.cb_Rubric.Items.Clear();
 

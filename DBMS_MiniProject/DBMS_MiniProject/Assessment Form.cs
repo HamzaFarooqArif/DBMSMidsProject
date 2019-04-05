@@ -23,6 +23,8 @@ namespace DBMS_MiniProject
             }
             //-------------------------------------------------------------------------------
             assessment_Form.ClearControls(assessment_Form);
+            Navbar nav = new Navbar("Assessment_Form");
+            assessment_Form.flowLayoutPanel1.Controls.Add(nav);
             assessment_Form.updateDGVAssessment();
             //-------------------------------------------------------------------------------
             return assessment_Form;

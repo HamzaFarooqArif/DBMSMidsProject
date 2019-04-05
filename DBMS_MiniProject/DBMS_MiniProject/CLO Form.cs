@@ -21,6 +21,8 @@ namespace DBMS_MiniProject
                 clo_Form = new CLO_Form();
             }
             clo_Form.ClearControls(clo_Form);
+            Navbar nav = new Navbar("CLO_Form");
+            clo_Form.flowLayoutPanel1.Controls.Add(nav);
             clo_Form.updateDGVClo();
             return clo_Form;
         }

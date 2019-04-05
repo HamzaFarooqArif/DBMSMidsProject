@@ -80,6 +80,12 @@
     <Compile Include="Index Form.Designer.cs">
       <DependentUpon>Index Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Navbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Navbar.Designer.cs">
+      <DependentUpon>Navbar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProjectBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -149,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Index Form.resx">
       <DependentUpon>Index Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navbar.resx">
+      <DependentUpon>Navbar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

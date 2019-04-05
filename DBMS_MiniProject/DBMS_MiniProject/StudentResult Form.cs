@@ -26,6 +26,8 @@ namespace DBMS_MiniProject
             }
             //-------------------------------------------------------------------------------
             studentResult_Form.ClearControls(studentResult_Form);
+            Navbar nav = new Navbar("StudentResult_Form");
+            studentResult_Form.flowLayoutPanel1.Controls.Add(nav);
             studentResult_Form.updateDGVStudentResult();
             studentResult_Form.cb_Assessment.Items.Clear();
             studentResult_Form.cb_Student.Items.Clear();

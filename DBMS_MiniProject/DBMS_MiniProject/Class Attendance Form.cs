@@ -21,7 +21,8 @@ namespace DBMS_MiniProject
             {
                 classAttendanceForm = new Class_Attendance_Form();
             }
-
+            Navbar nav = new Navbar("ClassAttendance_Form");
+            classAttendanceForm.flowLayoutPanel1.Controls.Add(nav);
             classAttendanceForm.updateDGVClassAttendance();
             return classAttendanceForm;
         }

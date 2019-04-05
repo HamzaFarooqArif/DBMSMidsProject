@@ -40,6 +40,7 @@
             this.lnk_ClassAttendance = new System.Windows.Forms.LinkLabel();
             this.lbl_Heading = new System.Windows.Forms.Label();
             this.lnk_Reports = new System.Windows.Forms.LinkLabel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             // 
             this.lbl_StudentForm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_StudentForm.AutoSize = true;
-            this.lbl_StudentForm.Location = new System.Drawing.Point(95, 6);
+            this.lbl_StudentForm.Location = new System.Drawing.Point(106, 7);
             this.lbl_StudentForm.Name = "lbl_StudentForm";
             this.lbl_StudentForm.Size = new System.Drawing.Size(70, 13);
             this.lbl_StudentForm.TabIndex = 0;
@@ -59,7 +60,7 @@
             // 
             this.lbl_Clo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Clo.AutoSize = true;
-            this.lbl_Clo.Location = new System.Drawing.Point(103, 156);
+            this.lbl_Clo.Location = new System.Drawing.Point(114, 175);
             this.lbl_Clo.Name = "lbl_Clo";
             this.lbl_Clo.Size = new System.Drawing.Size(54, 13);
             this.lbl_Clo.TabIndex = 6;
@@ -71,7 +72,7 @@
             // 
             this.lbl_RubricForm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_RubricForm.AutoSize = true;
-            this.lbl_RubricForm.Location = new System.Drawing.Point(98, 181);
+            this.lbl_RubricForm.Location = new System.Drawing.Point(109, 203);
             this.lbl_RubricForm.Name = "lbl_RubricForm";
             this.lbl_RubricForm.Size = new System.Drawing.Size(64, 13);
             this.lbl_RubricForm.TabIndex = 7;
@@ -96,7 +97,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lnk_RubricLevel, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.lnk_ClassAttendance, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.lnk_Reports, 0, 9);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 37);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(259, 37);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -109,14 +110,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(260, 257);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(282, 284);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lnk_AssessmentComponent
             // 
             this.lnk_AssessmentComponent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lnk_AssessmentComponent.AutoSize = true;
-            this.lnk_AssessmentComponent.Location = new System.Drawing.Point(57, 131);
+            this.lnk_AssessmentComponent.Location = new System.Drawing.Point(68, 147);
             this.lnk_AssessmentComponent.Name = "lnk_AssessmentComponent";
             this.lnk_AssessmentComponent.Size = new System.Drawing.Size(146, 13);
             this.lnk_AssessmentComponent.TabIndex = 5;
@@ -128,7 +129,7 @@
             // 
             this.lbl_AssessmentForm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_AssessmentForm.AutoSize = true;
-            this.lbl_AssessmentForm.Location = new System.Drawing.Point(85, 106);
+            this.lbl_AssessmentForm.Location = new System.Drawing.Point(96, 119);
             this.lbl_AssessmentForm.Name = "lbl_AssessmentForm";
             this.lbl_AssessmentForm.Size = new System.Drawing.Size(89, 13);
             this.lbl_AssessmentForm.TabIndex = 4;
@@ -140,7 +141,7 @@
             // 
             this.lbl_StudentResult.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_StudentResult.AutoSize = true;
-            this.lbl_StudentResult.Location = new System.Drawing.Point(78, 31);
+            this.lbl_StudentResult.Location = new System.Drawing.Point(89, 35);
             this.lbl_StudentResult.Name = "lbl_StudentResult";
             this.lbl_StudentResult.Size = new System.Drawing.Size(103, 13);
             this.lbl_StudentResult.TabIndex = 1;
@@ -152,7 +153,7 @@
             // 
             this.lnk_StudentAttendance.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lnk_StudentAttendance.AutoSize = true;
-            this.lnk_StudentAttendance.Location = new System.Drawing.Point(79, 56);
+            this.lnk_StudentAttendance.Location = new System.Drawing.Point(90, 63);
             this.lnk_StudentAttendance.Name = "lnk_StudentAttendance";
             this.lnk_StudentAttendance.Size = new System.Drawing.Size(102, 13);
             this.lnk_StudentAttendance.TabIndex = 2;
@@ -164,7 +165,7 @@
             // 
             this.lnk_RubricLevel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lnk_RubricLevel.AutoSize = true;
-            this.lnk_RubricLevel.Location = new System.Drawing.Point(83, 206);
+            this.lnk_RubricLevel.Location = new System.Drawing.Point(94, 231);
             this.lnk_RubricLevel.Name = "lnk_RubricLevel";
             this.lnk_RubricLevel.Size = new System.Drawing.Size(93, 13);
             this.lnk_RubricLevel.TabIndex = 8;
@@ -176,7 +177,7 @@
             // 
             this.lnk_ClassAttendance.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lnk_ClassAttendance.AutoSize = true;
-            this.lnk_ClassAttendance.Location = new System.Drawing.Point(72, 81);
+            this.lnk_ClassAttendance.Location = new System.Drawing.Point(83, 91);
             this.lnk_ClassAttendance.Name = "lnk_ClassAttendance";
             this.lnk_ClassAttendance.Size = new System.Drawing.Size(116, 13);
             this.lnk_ClassAttendance.TabIndex = 3;
@@ -189,7 +190,7 @@
             this.lbl_Heading.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_Heading.AutoSize = true;
             this.lbl_Heading.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Heading.Location = new System.Drawing.Point(72, 9);
+            this.lbl_Heading.Location = new System.Drawing.Point(206, 9);
             this.lbl_Heading.Name = "lbl_Heading";
             this.lbl_Heading.Size = new System.Drawing.Size(154, 25);
             this.lbl_Heading.TabIndex = 12;
@@ -199,7 +200,7 @@
             // 
             this.lnk_Reports.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lnk_Reports.AutoSize = true;
-            this.lnk_Reports.Location = new System.Drawing.Point(95, 234);
+            this.lnk_Reports.Location = new System.Drawing.Point(106, 261);
             this.lnk_Reports.Name = "lnk_Reports";
             this.lnk_Reports.Size = new System.Drawing.Size(70, 13);
             this.lnk_Reports.TabIndex = 9;
@@ -207,11 +208,19 @@
             this.lnk_Reports.Text = "Reports Form";
             this.lnk_Reports.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_Reports_LinkClicked);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 31);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(105, 296);
+            this.flowLayoutPanel1.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 306);
+            this.ClientSize = new System.Drawing.Size(553, 333);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.lbl_Heading);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(300, 150);
@@ -239,6 +248,7 @@
         private System.Windows.Forms.LinkLabel lnk_StudentAttendance;
         private System.Windows.Forms.LinkLabel lnk_ClassAttendance;
         private System.Windows.Forms.LinkLabel lnk_Reports;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 

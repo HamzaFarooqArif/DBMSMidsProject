@@ -22,6 +22,8 @@ namespace DBMS_MiniProject
             }
 
             student_Form.ClearControls(student_Form);
+            Navbar nav = new Navbar("Student_Form");
+            student_Form.flowLayoutPanel1.Controls.Add(nav);
             student_Form.updateDGVStudent();
             student_Form.cb_status.Items.Clear();
             List<Lookup> lookupList = Lookup.retrieveLookupsByCategory("STUDENT_STATUS");

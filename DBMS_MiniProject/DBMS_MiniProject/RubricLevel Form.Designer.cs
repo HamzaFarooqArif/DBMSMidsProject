@@ -57,6 +57,7 @@
             this.tableAdapterManager1 = new DBMS_MiniProject.ProjectBDataSetTableAdapters.TableAdapterManager();
             this.tableAdapterManager2 = new DBMS_MiniProject.ProjectBDataSetTableAdapters.TableAdapterManager();
             this.tableAdapterManager3 = new DBMS_MiniProject.ProjectBDataSetTableAdapters.TableAdapterManager();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_RubricLevel)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -91,7 +92,7 @@
             this.txt_Details.Location = new System.Drawing.Point(3, 3);
             this.txt_Details.MaxLength = 50;
             this.txt_Details.Name = "txt_Details";
-            this.txt_Details.Size = new System.Drawing.Size(431, 20);
+            this.txt_Details.Size = new System.Drawing.Size(320, 20);
             this.txt_Details.TabIndex = 0;
             this.txt_Details.TextChanged += new System.EventHandler(this.txt_Details_TextChanged);
             // 
@@ -101,7 +102,7 @@
             this.txt_MeasurementLevel.Location = new System.Drawing.Point(3, 3);
             this.txt_MeasurementLevel.MaxLength = 1;
             this.txt_MeasurementLevel.Name = "txt_MeasurementLevel";
-            this.txt_MeasurementLevel.Size = new System.Drawing.Size(431, 20);
+            this.txt_MeasurementLevel.Size = new System.Drawing.Size(320, 20);
             this.txt_MeasurementLevel.TabIndex = 0;
             this.txt_MeasurementLevel.TextChanged += new System.EventHandler(this.txt_MeasurementLevel_TextChanged);
             // 
@@ -122,7 +123,7 @@
             this.cb_Rubric.FormattingEnabled = true;
             this.cb_Rubric.Location = new System.Drawing.Point(118, 53);
             this.cb_Rubric.Name = "cb_Rubric";
-            this.cb_Rubric.Size = new System.Drawing.Size(487, 21);
+            this.cb_Rubric.Size = new System.Drawing.Size(376, 21);
             this.cb_Rubric.TabIndex = 2;
             this.cb_Rubric.SelectedIndexChanged += new System.EventHandler(this.cb_Rubric_SelectedIndexChanged);
             // 
@@ -142,7 +143,7 @@
             this.txt_RubricDetails.Location = new System.Drawing.Point(118, 78);
             this.txt_RubricDetails.Name = "txt_RubricDetails";
             this.txt_RubricDetails.ReadOnly = true;
-            this.txt_RubricDetails.Size = new System.Drawing.Size(487, 20);
+            this.txt_RubricDetails.Size = new System.Drawing.Size(376, 20);
             this.txt_RubricDetails.TabIndex = 3;
             // 
             // dgv_RubricLevel
@@ -158,9 +159,9 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgv_RubricLevel.Location = new System.Drawing.Point(12, 180);
+            this.dgv_RubricLevel.Location = new System.Drawing.Point(123, 180);
             this.dgv_RubricLevel.Name = "dgv_RubricLevel";
-            this.dgv_RubricLevel.Size = new System.Drawing.Size(608, 130);
+            this.dgv_RubricLevel.Size = new System.Drawing.Size(497, 154);
             this.dgv_RubricLevel.TabIndex = 2;
             this.dgv_RubricLevel.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_RubricLevel_CellContentClick);
             // 
@@ -196,7 +197,7 @@
             this.btn_Add.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Add.Location = new System.Drawing.Point(3, 3);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(146, 25);
+            this.btn_Add.Size = new System.Drawing.Size(118, 25);
             this.btn_Add.TabIndex = 0;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
@@ -205,9 +206,9 @@
             // btn_Update
             // 
             this.btn_Update.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Update.Location = new System.Drawing.Point(155, 3);
+            this.btn_Update.Location = new System.Drawing.Point(127, 3);
             this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(146, 25);
+            this.btn_Update.Size = new System.Drawing.Size(118, 25);
             this.btn_Update.TabIndex = 1;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = true;
@@ -216,9 +217,9 @@
             // btn_Delete
             // 
             this.btn_Delete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Delete.Location = new System.Drawing.Point(307, 3);
+            this.btn_Delete.Location = new System.Drawing.Point(251, 3);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(146, 25);
+            this.btn_Delete.Size = new System.Drawing.Size(118, 25);
             this.btn_Delete.TabIndex = 2;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
@@ -227,9 +228,9 @@
             // btn_Exit
             // 
             this.btn_Exit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Exit.Location = new System.Drawing.Point(459, 3);
+            this.btn_Exit.Location = new System.Drawing.Point(375, 3);
             this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(146, 25);
+            this.btn_Exit.Size = new System.Drawing.Size(119, 25);
             this.btn_Exit.TabIndex = 3;
             this.btn_Exit.Text = "Exit To Home";
             this.btn_Exit.UseVisualStyleBackColor = true;
@@ -250,14 +251,14 @@
             this.tableLayoutPanel1.Controls.Add(this.lbl_Rubric, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.lbl_Details, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbl_MeasurementLevel, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 37);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(123, 37);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(608, 100);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(497, 100);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel4
@@ -272,7 +273,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(487, 19);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(376, 19);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // lbl_Validation2
@@ -280,7 +281,7 @@
             this.lbl_Validation2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Validation2.AutoSize = true;
             this.lbl_Validation2.ForeColor = System.Drawing.Color.Red;
-            this.lbl_Validation2.Location = new System.Drawing.Point(440, 3);
+            this.lbl_Validation2.Location = new System.Drawing.Point(329, 3);
             this.lbl_Validation2.Name = "lbl_Validation2";
             this.lbl_Validation2.Size = new System.Drawing.Size(38, 13);
             this.lbl_Validation2.TabIndex = 0;
@@ -298,7 +299,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(487, 19);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(376, 19);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // lbl_Validation1
@@ -306,7 +307,7 @@
             this.lbl_Validation1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Validation1.AutoSize = true;
             this.lbl_Validation1.ForeColor = System.Drawing.Color.Red;
-            this.lbl_Validation1.Location = new System.Drawing.Point(440, 3);
+            this.lbl_Validation1.Location = new System.Drawing.Point(329, 3);
             this.lbl_Validation1.Name = "lbl_Validation1";
             this.lbl_Validation1.Size = new System.Drawing.Size(38, 13);
             this.lbl_Validation1.TabIndex = 0;
@@ -336,12 +337,12 @@
             this.tableLayoutPanel2.Controls.Add(this.btn_Update, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_Delete, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_Exit, 3, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 143);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(123, 143);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(608, 31);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(497, 31);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // projectBDataSet1
@@ -370,11 +371,19 @@
             this.tableAdapterManager3.StudentTableAdapter = null;
             this.tableAdapterManager3.UpdateOrder = DBMS_MiniProject.ProjectBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 37);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(105, 296);
+            this.flowLayoutPanel1.TabIndex = 25;
+            // 
             // RubricLevel_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 322);
+            this.ClientSize = new System.Drawing.Size(632, 346);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.lbl_Heading);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -427,5 +436,6 @@
         private ProjectBDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
         private ProjectBDataSetTableAdapters.TableAdapterManager tableAdapterManager2;
         private ProjectBDataSetTableAdapters.TableAdapterManager tableAdapterManager3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

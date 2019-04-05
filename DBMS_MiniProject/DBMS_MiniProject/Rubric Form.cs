@@ -23,6 +23,8 @@ namespace DBMS_MiniProject
             }
             //-------------------------------------------------------------------------------
             rubric_Form.ClearControls(rubric_Form);
+            Navbar nav = new Navbar("Rubric_Form");
+            rubric_Form.flowLayoutPanel1.Controls.Add(nav);
             rubric_Form.updateDGVRubric();
             rubric_Form.cb_Clo.Items.Clear();
             List<Clo> cloList = Clo.retrieveClos();

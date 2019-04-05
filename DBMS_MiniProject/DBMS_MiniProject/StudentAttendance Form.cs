@@ -20,6 +20,8 @@ namespace DBMS_MiniProject
                 studentAttendance_Form = new StudentAttendance_Form();
             }
             studentAttendance_Form.ClearControls(studentAttendance_Form);
+            Navbar nav = new Navbar("StudentAttendance_Form");
+            studentAttendance_Form.flowLayoutPanel1.Controls.Add(nav);
             studentAttendance_Form.refresh();
             studentAttendance_Form.updateDGVStudentAttendance();
             
