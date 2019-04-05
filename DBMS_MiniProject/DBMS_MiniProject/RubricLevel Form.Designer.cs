@@ -47,17 +47,22 @@
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_Heading = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_Validation1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Validation2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Validation1 = new System.Windows.Forms.Label();
+            this.lbl_Heading = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.projectBDataSet1 = new DBMS_MiniProject.ProjectBDataSet();
+            this.tableAdapterManager1 = new DBMS_MiniProject.ProjectBDataSetTableAdapters.TableAdapterManager();
+            this.tableAdapterManager2 = new DBMS_MiniProject.ProjectBDataSetTableAdapters.TableAdapterManager();
+            this.tableAdapterManager3 = new DBMS_MiniProject.ProjectBDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_RubricLevel)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Details
@@ -255,6 +260,58 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(608, 100);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.txt_MeasurementLevel, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Validation2, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(118, 28);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(487, 19);
+            this.tableLayoutPanel4.TabIndex = 1;
+            // 
+            // lbl_Validation2
+            // 
+            this.lbl_Validation2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Validation2.AutoSize = true;
+            this.lbl_Validation2.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Validation2.Location = new System.Drawing.Point(440, 3);
+            this.lbl_Validation2.Name = "lbl_Validation2";
+            this.lbl_Validation2.Size = new System.Drawing.Size(38, 13);
+            this.lbl_Validation2.TabIndex = 0;
+            this.lbl_Validation2.Text = "Invalid";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.txt_Details, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_Validation1, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(118, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(487, 19);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // lbl_Validation1
+            // 
+            this.lbl_Validation1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Validation1.AutoSize = true;
+            this.lbl_Validation1.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Validation1.Location = new System.Drawing.Point(440, 3);
+            this.lbl_Validation1.Name = "lbl_Validation1";
+            this.lbl_Validation1.Size = new System.Drawing.Size(38, 13);
+            this.lbl_Validation1.TabIndex = 0;
+            this.lbl_Validation1.Text = "Invalid";
+            // 
             // lbl_Heading
             // 
             this.lbl_Heading.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -287,57 +344,31 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(608, 31);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
-            // tableLayoutPanel3
+            // projectBDataSet1
             // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.txt_Details, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lbl_Validation1, 1, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(118, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(487, 19);
-            this.tableLayoutPanel3.TabIndex = 0;
+            this.projectBDataSet1.DataSetName = "ProjectBDataSet";
+            this.projectBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // lbl_Validation1
+            // tableAdapterManager1
             // 
-            this.lbl_Validation1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_Validation1.AutoSize = true;
-            this.lbl_Validation1.ForeColor = System.Drawing.Color.Red;
-            this.lbl_Validation1.Location = new System.Drawing.Point(440, 3);
-            this.lbl_Validation1.Name = "lbl_Validation1";
-            this.lbl_Validation1.Size = new System.Drawing.Size(38, 13);
-            this.lbl_Validation1.TabIndex = 0;
-            this.lbl_Validation1.Text = "Invalid";
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.Connection = null;
+            this.tableAdapterManager1.StudentTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = DBMS_MiniProject.ProjectBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // tableLayoutPanel4
+            // tableAdapterManager2
             // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.txt_MeasurementLevel, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.lbl_Validation2, 1, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(118, 28);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(487, 19);
-            this.tableLayoutPanel4.TabIndex = 1;
+            this.tableAdapterManager2.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager2.Connection = null;
+            this.tableAdapterManager2.StudentTableAdapter = null;
+            this.tableAdapterManager2.UpdateOrder = DBMS_MiniProject.ProjectBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // lbl_Validation2
+            // tableAdapterManager3
             // 
-            this.lbl_Validation2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_Validation2.AutoSize = true;
-            this.lbl_Validation2.ForeColor = System.Drawing.Color.Red;
-            this.lbl_Validation2.Location = new System.Drawing.Point(440, 3);
-            this.lbl_Validation2.Name = "lbl_Validation2";
-            this.lbl_Validation2.Size = new System.Drawing.Size(38, 13);
-            this.lbl_Validation2.TabIndex = 0;
-            this.lbl_Validation2.Text = "Invalid";
+            this.tableAdapterManager3.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager3.Connection = null;
+            this.tableAdapterManager3.StudentTableAdapter = null;
+            this.tableAdapterManager3.UpdateOrder = DBMS_MiniProject.ProjectBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // RubricLevel_Form
             // 
@@ -354,11 +385,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_RubricLevel)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,5 +423,9 @@
         private System.Windows.Forms.Label lbl_Validation2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label lbl_Validation1;
+        private ProjectBDataSet projectBDataSet1;
+        private ProjectBDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private ProjectBDataSetTableAdapters.TableAdapterManager tableAdapterManager2;
+        private ProjectBDataSetTableAdapters.TableAdapterManager tableAdapterManager3;
     }
 }

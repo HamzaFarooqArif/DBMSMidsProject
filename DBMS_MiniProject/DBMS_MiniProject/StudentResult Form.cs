@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace DBMS_MiniProject
 {
@@ -41,7 +44,7 @@ namespace DBMS_MiniProject
             if (studentResult_Form.cb_Assessment.Items.Count > 0) studentResult_Form.cb_Assessment.SelectedItem = studentResult_Form.cb_Assessment.Items[0];
             if (studentResult_Form.cb_Student.Items.Count > 0) studentResult_Form.cb_Student.SelectedItem = studentResult_Form.cb_Student.Items[0];
             //-------------------------------------------------------------------------------
-            if(studentResult_Form.cb_Assessment.Items.Count > 0 && studentResult_Form.cb_Student.Items.Count > 0)
+            if (studentResult_Form.cb_Assessment.Items.Count > 0 && studentResult_Form.cb_Student.Items.Count > 0)
             {
                 studentResult_Form.flp_Student.Controls.Clear();
                 Assessment asta = StudentResult_Form.getAssessment();
@@ -120,8 +123,8 @@ namespace DBMS_MiniProject
             }
             int added = 0;
             int updated = 0;
-            
-            foreach(studentResultControl control in flp_Student.Controls)
+
+            foreach (studentResultControl control in flp_Student.Controls)
             {
                 int temp = control.Confirm();
                 if (temp == 1) added++;
@@ -159,9 +162,9 @@ namespace DBMS_MiniProject
                 return;
             }
             int result = 0;
-            foreach(studentResultControl ctrl in flp_Student.Controls)
+            foreach (studentResultControl ctrl in flp_Student.Controls)
             {
-                if(StudentResult.deleteStudentResult(Student.getStudentByRegistrationNumber(cb_Student.Text).Id, ctrl.getAssessmentComponent().Id))
+                if (StudentResult.deleteStudentResult(Student.getStudentByRegistrationNumber(cb_Student.Text).Id, ctrl.getAssessmentComponent().Id))
                 {
                     result++;
                 }
@@ -206,6 +209,11 @@ namespace DBMS_MiniProject
                 string.IsNullOrWhiteSpace(cb_Student.Text)
               ) return true;
             else return false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Report.writeCloReport();
         }
     }
 }

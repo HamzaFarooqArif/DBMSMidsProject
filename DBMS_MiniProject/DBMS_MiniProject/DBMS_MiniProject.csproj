@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>.\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -84,6 +87,12 @@
       <DependentUpon>ProjectBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports Form.Designer.cs">
+      <DependentUpon>Reports Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Rubric Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +159,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports Form.resx">
+      <DependentUpon>Reports Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Rubric Form.resx">
       <DependentUpon>Rubric Form.cs</DependentUpon>
     </EmbeddedResource>

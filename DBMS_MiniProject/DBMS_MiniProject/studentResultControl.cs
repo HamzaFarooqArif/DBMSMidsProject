@@ -35,6 +35,7 @@ namespace DBMS_MiniProject
             {
                 cb_MeasurementLevel.Items.Add(rl.MeasurementLevel);
             }
+            cb_MeasurementLevel.Sorted = true;
             if (cb_MeasurementLevel.Items.Count > 0)
             {
                 cb_MeasurementLevel.SelectedItem = cb_MeasurementLevel.Items[0];

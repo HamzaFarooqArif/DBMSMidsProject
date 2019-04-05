@@ -55,7 +55,7 @@ namespace DBMS_MiniProject
             }
 
             flp_StudentAttendance.Controls.Clear();
-            List<Student> studentList = Student.retrieveStudents();
+            List<Student> studentList = Student.retrieveActiveStudents();
             foreach(Student st in studentList)
             {
                 if(!string.IsNullOrWhiteSpace(cb_ClassAttendance.Text))
@@ -101,7 +101,12 @@ namespace DBMS_MiniProject
 
             foreach (studentAttendanceControl control in flp_StudentAttendance.Controls)
             {
-                int temp = control.Confirm();
+                int month = Int32.Parse(cb_ClassAttendance.Text.Split('/')[0]);
+                int day = Int32.Parse(cb_ClassAttendance.Text.Split('/')[1]);
+                int year = Int32.Parse(cb_ClassAttendance.Text.Split('/')[2]);
+                DateTime date = new DateTime(year, month, day);
+
+                int temp = control.Confirm(ClassAttendance.getClassAttendanceByDate(date));
                 if (temp == 1) added++;
                 if (temp == 2) updated++;
             }
