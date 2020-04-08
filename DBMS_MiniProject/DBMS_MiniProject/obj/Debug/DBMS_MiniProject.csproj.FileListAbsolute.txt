@@ -32,3 +32,28 @@ C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\bin\Debug
 C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\bin\Debug\itextsharp.xml
 C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.Reports_Form.resources
 C:\Users\Acer\Desktop\git db project\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.Navbar.resources
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\bin\Debug\DBMS_MiniProject.exe.config
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\bin\Debug\DBMS_MiniProject.exe
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\bin\Debug\DBMS_MiniProject.pdb
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\bin\Debug\itextsharp.dll
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\bin\Debug\itextsharp.xml
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.csprojAssemblyReference.cache
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.Assessment_Form.resources
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.AssessmentComponent_Form.resources
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.Class_Attendance_Form.resources
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.CLO_Form.resources
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.Form1.resources
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.Navbar.resources
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.Properties.Resources.resources
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.Reports_Form.resources
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.Rubric_Form.resources
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.RubricLevel_Form.resources
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.Student_Form.resources
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.StudentAttendance_Form.resources
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.studentAttendanceControl.resources
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.StudentResult_Form.resources
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.studentResultControl.resources
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.csproj.GenerateResource.cache
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.csproj.CopyComplete
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.exe
+C:\Users\Acer\Desktop\LabManagementSystem---DB-Lab\DBMS_MiniProject\DBMS_MiniProject\obj\Debug\DBMS_MiniProject.pdb
